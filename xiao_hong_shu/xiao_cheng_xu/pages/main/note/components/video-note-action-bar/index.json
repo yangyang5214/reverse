@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "avatar": "../avatar/index",
+        "collect-form": "../collect-form/index"
+    }
+}

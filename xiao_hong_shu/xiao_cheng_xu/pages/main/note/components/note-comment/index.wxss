@@ -1,0 +1,88 @@
+.note-item-normal__expression {
+    display: inline-block;
+    height: 35rpx;
+    vertical-align: text-top;
+    width: 35rpx;
+}
+
+.comment-container {
+    font-size: 26rpx;
+    padding: 0 30rpx 0rpx;
+}
+
+.comment-container .comment-inner {
+    background: #f5f5f5;
+    border-radius: 16rpx;
+    padding: 20rpx;
+}
+
+.new-style .total {
+    display: block;
+    font-size: 26rpx;
+    font-weight: 400;
+}
+
+.total {
+    color: #999;
+    height: 40rpx;
+    margin-top: 10rpx;
+    text-align: left;
+}
+
+.total .text-underline {
+    text-decoration: underline;
+}
+
+.total .blue-font {
+    color: #5b92e1;
+}
+
+.total image {
+    height: 18rpx;
+    margin-left: 5rpx;
+    width: 12rpx;
+}
+
+.commenter {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.comment {
+    display: inline;
+    font-size: 26rpx;
+}
+
+.note-item-normal__desc-line {
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.comment-input {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    padding: 10rpx 30rpx 0;
+    position: relative;
+}
+
+.comment-input .comment-input-inner {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    line-height: 20px;
+}
+
+.comment-input .avatar {
+    height: 20px;
+}
+
+.comment-input .send-comment {
+    color: #999;
+    display: inline-block;
+    font-size: 28rpx;
+    line-height: 33.6rpx;
+    margin-left: 18rpx;
+}

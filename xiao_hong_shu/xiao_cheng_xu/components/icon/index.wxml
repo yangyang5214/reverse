@@ -1,0 +1,1 @@
+<image class="quark-icon" src="../../assets/svgs/{{svg}}.svg" style="width: {{width}};height: {{height}}" wx:if="{{svg}}"></image>

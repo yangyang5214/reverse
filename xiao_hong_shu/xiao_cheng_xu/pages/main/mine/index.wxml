@@ -1,0 +1,11 @@
+<scroll-view bindscroll="handleScroll" bindscrolltolower="handleScrollToLower" scrollY="true" style="position: absolute; top: 0; left: 0; right: 0 ;bottom: 0">
+    <QuarkPage navigationBarConfig="{{navigationBarConfig}}" pageConfig="{{pageConfig}}" type="{{type}}">
+        <UserInfoComponent bindtapSwitchTab="handleTapSwitchTabType" isFetchEnd="{{isFetchEnd}}" isMembership="{{isMembership}}" isMinePage="{{isMinePage}}" noteList="{{noteList}}" switchTab="{{switchTab}}" userInfo="{{userInfo}}">
+            <view class="detail-bottom {{isLogin?'isLogin':''}}" slot="detail-bottom">
+                <view bindtap="handleTapSettings" class="settings" wx:if="{{isLogin}}">
+                    <image class="settings-img" src="https://fe-img-qc.xhscdn.com/bd2cc183a7a43226116c74a08660828428697481"></image>
+                </view>
+            </view>
+        </UserInfoComponent>
+    </QuarkPage>
+</scroll-view>

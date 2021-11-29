@@ -1,0 +1,11 @@
+{
+    "component": false,
+    "usingComponents": {
+        "NoteComment": "../components/note-comment/index",
+        "CommentInput": "../components/note-comment/comment-input",
+        "Loading": "../../../components/loading/index",
+        "LoadingRed": "../../../components/loading/index",
+        "QuarkPage": "../../../components/page/index",
+        "LaunchApp": "../../../components/launch-app/slot"
+    }
+}

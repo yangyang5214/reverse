@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "笔记详情",
+    "backgroundColor": "#ffffff",
+    "usingComponents": {
+        "navigation-bar": "../note/components/navigation-bar/index",
+        "page-normal-note": "../note/components/page-normal-note/index",
+        "page-video-note": "../note/components/page-video-note/index",
+        "login-required": "../../../components/login-required/index",
+        "add-mp-toast": "../../../components/toast/add-mp-toast"
+    }
+}

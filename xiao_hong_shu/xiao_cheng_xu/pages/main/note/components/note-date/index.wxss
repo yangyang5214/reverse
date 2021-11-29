@@ -1,0 +1,9 @@
+.note-date {
+    color: #999;
+    display: inline-block;
+    font-size: 22rpx;
+    font-style: PingFang SC;
+    line-height: 32rpx;
+    padding: 20rpx 10rpx 20rpx 0;
+    white-space: nowrap;
+}

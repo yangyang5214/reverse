@@ -1,0 +1,33 @@
+<view bindtap="handleCloseModal" class="login-required-conatiner" wx:if="{{show}}">
+    <view catchtap="handleClickModal" class="login-required-modal">
+        <view catchtap="handleCloseModal" class="close">
+            <image src="https://ci.xiaohongshu.com/b03b7f12-9aca-4eec-8621-3e8756d454f3"></image>
+        </view>
+        <view class="logo">
+            <image src="https://ci.xiaohongshu.com/1e901d29-2994-42e6-befa-f2a18ec897de"></image>
+        </view>
+        <view class="label">
+            <view class="line"></view>
+            <view class="text">
+        选择登录方式
+      </view>
+            <view class="line"></view>
+        </view>
+        <view class="types">
+            <view class="type-item">
+                <button bindgetphonenumber="handleGetPhoneNumber" openType="getPhoneNumber">
+                    <image class="type-item-icon" src="https://ci.xiaohongshu.com/d0a522c0-b8d6-4037-b28b-f26769b0d437"></image>
+                    <view class="type-item-text">
+            微信登录
+          </view>
+                </button>
+            </view>
+            <view catchtap="handleGoToMobileLogin" class="type-item">
+                <image class="type-item-icon" src="https://ci.xiaohongshu.com/6370da23-ebe6-4262-9d86-37beabb09284"></image>
+                <view class="type-item-text">
+          手机登录
+        </view>
+            </view>
+        </view>
+    </view>
+</view>

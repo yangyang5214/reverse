@@ -1,0 +1,30 @@
+<view class="action-bar">
+    <view class="item comment">
+        <view catchtap="handleGoCommentPage" class="action-box">
+            <image src="../../../../../assets/images/comment_black.svg"></image>
+            <text>{{commentNumText}}</text>
+        </view>
+    </view>
+    <view class="item share">
+        <view class="action-box">
+            <image src="{{shareIconSrc}}"></image>
+            <text wx:if="{{sharedNum>0}}">{{sharedNumText}}</text>
+            <button class="share" openType="share" plain="{{true}}"></button>
+        </view>
+    </view>
+    <view class="right-box">
+        <collect-form bind:submit="handleTapCollect" class="item collect" fromSource="collect_note">
+            <view class="action-box">
+                <image src="{{collectIconSrc}}"></image>
+                <text>{{collectNumText}}</text>
+            </view>
+        </collect-form>
+        <collect-form bind:submit="handleTapLike" class="item like" fromSource="like_note">
+            <view class="action-box">
+                <image src="{{likeIconSrc}}"></image>
+                <text>{{likeNumText}}</text>
+            </view>
+        </collect-form>
+    </view>
+    <comment-input></comment-input>
+</view>

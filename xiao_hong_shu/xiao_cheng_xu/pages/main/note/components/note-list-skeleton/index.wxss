@@ -1,0 +1,72 @@
+.related-skeleton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.related-skeleton .left {
+    margin-left: 10rpx;
+    width: 360rpx;
+}
+
+.related-skeleton .right {
+    margin-right: 10rpx;
+    width: 360rpx;
+}
+
+.related-skeleton .item {
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 10rpx;
+    position: relative;
+    width: 100%;
+}
+
+.related-skeleton .item .top-box {
+    background: #fafcfe;
+    height: 400rpx;
+    width: 100%;
+}
+
+.related-skeleton .item .desc-box {
+    background: #fafcfe;
+    height: 30rpx;
+    margin: 20rpx;
+    width: 320rpx;
+}
+
+.related-skeleton .info-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.related-skeleton .author-box {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 20rpx;
+}
+
+.related-skeleton .avatar-box {
+    background: #fafcfe;
+    border-radius: 50%;
+    height: 36rpx;
+    width: 36rpx;
+}
+
+.related-skeleton .nickname-box {
+    background: #fafcfe;
+    height: 24rpx;
+    margin-left: 10rpx;
+    width: 96rpx;
+}
+
+.related-skeleton .like-box {
+    background: #fafcfe;
+    height: 24rpx;
+    margin-right: 20rpx;
+    width: 40rpx;
+}

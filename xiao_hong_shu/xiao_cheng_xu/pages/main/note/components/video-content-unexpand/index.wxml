@@ -1,0 +1,23 @@
+<view class="video-content" wx:if="{{note.id}}">
+    <view class="video-content-box">
+        <view class="user-information">
+            <view catchtap="handleTapAvatar" class="skip-user">
+                <image src="{{note.user.image}}"></image>
+                <text>{{note.user.nickname}}</text>
+            </view>
+            <view catchtap="handleFocuseOn" class="focus-on">
+        {{note.user&&note.user.isFollowed?'已关注':'关注'}}
+      </view>
+        </view>
+        <view catchtap="handleExpand" class="video-content-details-unexpand">
+            <view class="video-content-text-unexpand">
+        {{note.desc||note.title}}
+      </view>
+            <view class="placeholder-unexpand" wx:if="{{showExpandBut}}">
+                <view class="open">
+          展开
+        </view>
+            </view>
+        </view>
+    </view>
+</view>

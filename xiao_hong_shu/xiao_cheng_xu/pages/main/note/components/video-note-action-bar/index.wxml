@@ -1,0 +1,21 @@
+<view class="action-bar">
+    <button class="part-left" openType="share">
+        <view class="share3">
+            <image class="share3" src="https://fe-video-qc.xhscdn.com/picasso-editor/a0dd603f72a11f6dca5c0bd24587a2e7a390edef.png"></image>
+        </view>
+    </button>
+    <view class="part-right">
+        <view catchtap="handleTapLike" class="item like">
+            <image src="{{likeIconSrc}}"></image>
+            <text>{{likeNumText}}</text>
+        </view>
+        <view catchtap="handleTapCollect" class="item collect">
+            <image src="{{collectIconSrc}}"></image>
+            <text>{{collectNumText}}</text>
+        </view>
+        <view catchtap="handleShowComment" class="item comment">
+            <image src="{{commentIconSrc}}"></image>
+            <text>{{commentNumText}}</text>
+        </view>
+    </view>
+</view>

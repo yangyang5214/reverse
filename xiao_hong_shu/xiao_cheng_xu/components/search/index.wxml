@@ -1,0 +1,17 @@
+<FixedContainer>
+    <view class="search-header {{type==='home'?'home-header':''}}">
+        <view class="search-bar {{hasSearch?'':'no-cancel'}} {{type==='home'?'home-bar':''}}">
+            <Quark-icon1 class="search-svg {{type==='home'?'home-search-svg':''}}" height="36rpx" svg="search" width="36rpx"></Quark-icon1>
+            <input bind:confirm="handleConfirm" bindfocus="handleFocus" bindinput="handleInput" class="search-input" confirmType="search" focus="{{focus}}" placeholder="{{placeHolder}}" placeholderClass="placeholder-class" value="{{searchValue}}" wx:if="{{type==='search'}}"></input>
+            <view bindtap="goSearchPage" class="search-input {{type==='home'?'home-input':''}}" wx:if="{{type==='trending'||type==='home'}}">
+                <view class="placeholder-class {{type==='home'?'search-input-home':'search-input-trending'}}">
+          {{type==='trending'?searchValue:placeHolder}}
+        </view>
+            </view>
+            <view bindtap="handleCancel" class="cancel-svg" wx:if="{{searchValue}}">
+                <Quark-icon2 height="24rpx" svg="cancel-grey" width="24rpx"></Quark-icon2>
+            </view>
+        </view>
+        <view bindtap="search" class="search-text" wx:if="{{hasSearch}}">搜索</view>
+    </view>
+</FixedContainer>

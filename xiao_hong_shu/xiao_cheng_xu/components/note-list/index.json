@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "NoteListLeftItem": "./note-list-item",
+        "NoteListRightItem": "./note-list-item"
+    }
+}

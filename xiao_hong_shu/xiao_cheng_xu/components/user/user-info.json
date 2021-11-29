@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "NoteList": "../note-list/index",
+        "QuarkIcon": "../icon/index",
+        "Loading": "../loading/index",
+        "Quark-x-not-found": "../not-found/index",
+        "FollowersLaunchApp": "../launch-app/slot",
+        "FollowingsLaunchApp": "../launch-app/slot"
+    }
+}

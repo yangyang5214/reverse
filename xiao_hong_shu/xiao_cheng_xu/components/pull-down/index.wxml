@@ -1,0 +1,8 @@
+<scroll-view enableBackToTop scrollWithAnimation scrollY bindscrolltolower="handleScrollBottom" bindscrolltoupper="handleScrollTop" class="scroll-view" lowerThreshold="{{bottomDistance}}" scrollIntoView="{{scrollIntoView}}" style="height:{{scrollHeight}};">
+    <view animation="{{animationData}}" bindtouchend="touchend" bindtouchmove="touchmove" bindtouchstart="touchstart" class="refresh-content refresh-container">
+        <LoadingGray class="loading-gray-padding" type="gray" wx:if="{{showPullDownLoading}}"></LoadingGray>
+        <slot></slot>
+        <view class="page-scroll-end"></view>
+        <LoadingDefault type="defeat" wx:if="{{isLoadMoreNoteList}}"></LoadingDefault>
+    </view>
+</scroll-view>

@@ -1,0 +1,9 @@
+{
+    "component": false,
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f5f8fa",
+    "onReachBottomDistance": 1000,
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index"
+    }
+}

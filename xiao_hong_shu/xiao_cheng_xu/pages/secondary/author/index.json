@@ -1,0 +1,12 @@
+{
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "NoteList": "../../../components/note-list/index",
+        "Quark-x-not-found": "../../../components/not-found/index",
+        "QuarkFollowGetForm": "../../../components/form/index",
+        "QuarkPage": "../../../components/page/index",
+        "UserInfoComponent": "../../../components/user/user-info",
+        "LaunchApp": "../../../components/launch-app/index",
+        "LoginRequired": "../../../components/login-required/index"
+    }
+}

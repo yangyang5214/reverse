@@ -1,0 +1,16 @@
+<view bindtap="handleTapItem" class="user-list-item">
+    <view class="user-avatar">
+        <image binderror="handleAvatarError" class="user-avatar__image" src="{{item.image}}" wx:if="{{item.image}}"></image>
+    </view>
+    <view class="user-about">
+        <view class="user-base">
+            <view class="user-name">{{item.nickname}}</view>
+            <image class="verify-icon" src="https://ci.xiaohongshu.com/fff0a44d-b9ad-4732-b0d9-7b999b270ed9" wx:if="{{item.redOfficialVerifyIconType===undefined&&item.redOfficialVerifyShowIcon||item.redOfficialVerifyIconType===1}}"></image>
+            <image class="verify-icon" src="https://ci.xiaohongshu.com/a0c1fc50-73d8-4ac0-9422-7eaf58217455" wx:if="{{item.redOfficialVerifyIconType===2}}"></image>
+        </view>
+        <view class="user-desc">{{item.desc}}</view>
+    </view>
+    <button catchtap="handleTriggleFollow" class="quark-button-outline {{item.fstatus==='follows'||item.fstatus==='both'?'disable':'red'}} focus">
+    {{item.fstatus==='follows'||item.fstatus==='both'?'已关注':'关注'}}
+  </button>
+</view>

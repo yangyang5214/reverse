@@ -1,0 +1,6 @@
+<QuarkForm bindsubmit="handleTapAvatar" class="avatar-container" style="width: {{width}}rpx;height: {{width}}rpx;">
+    <view class="avatar-container-inner">
+        <image binderror="handleAvatarError" class="avatar" src="{{item.avatarImage}}" style="width: {{width}}rpx;height: {{width}}rpx; {{hasBorder?'border: 1px solid #e6e6e6':''}}" wx:if="{{item.avatarImage}}"></image>
+        <image class="verified" src="{{officalVerified}}" style="width: {{width*13/40}}rpx;height: {{width*13/42}}rpx;" wx:if="{{item.avatarOfficialVerified}}"></image>
+    </view>
+</QuarkForm>

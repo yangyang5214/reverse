@@ -1,0 +1,20 @@
+<view>
+    <view class="header">
+        <view class="user-box">
+            <avatar catchtap="handleTapAvatar" class="avatar" data-id="{{user.id}}" imageSrc="{{user.image}}" isOfficialVerified="{{user.redOfficialVerified}}" width="{{80}}"></avatar>
+            <view class="user-info">
+                <view class="nick-name">{{user.nickname}}</view>
+                <view catchtap="handleTapPoi" class="poi" wx:if="{{isShowLocation}}">
+                    <image class="location-icon" src="../../../../../assets/images/2x_icon_location_grey.png"></image>
+          {{poi.name}}
+        </view>
+            </view>
+            <image class="verify-icon" src="https://ci.xiaohongshu.com/fff0a44d-b9ad-4732-b0d9-7b999b270ed9" wx:if="{{user.redOfficialVerifyIconType===1}}"></image>
+            <image class="verify-icon" src="https://ci.xiaohongshu.com/a0c1fc50-73d8-4ac0-9422-7eaf58217455" wx:if="{{user.redOfficialVerifyIconType===2}}"></image>
+        </view>
+        <collect-form bind:submit="handleTriggleFollow" class="follow-button {{isFollowed?'followed':''}}" fromSource="follow_author">
+            <view class="action-button">{{isFollowed?'已关注':'关注'}}</view>
+        </collect-form>
+    </view>
+    <follow-modal background="rgba(0, 0, 0, 0.4)" bind:unfollowAppUser="_unfollowAppUser" modalWidth="{{542}}" showModal="{{showFollowModal}}" user="{{user}}" wx:if="{{showFollowModal}}"></follow-modal>
+</view>

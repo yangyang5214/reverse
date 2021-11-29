@@ -1,0 +1,32 @@
+.loading-content {
+    text-align: center;
+}
+
+.loading-content .loading {
+    display: inline-block;
+}
+
+.loading-content .loading-defeat {
+    height: 40rpx;
+    width: 40rpx;
+}
+
+.loading-content .loading-red {
+    height: 90rpx;
+    width: 90rpx;
+}
+
+.loading-content .loading-gray {
+    height: 80rpx;
+    padding: 0;
+    width: 80rpx;
+}
+
+.loading-content .loading-text {
+    color: var(--GREY3);
+    font-family: San Francisco Display;
+    font-size: 25rpx;
+    line-height: 25rpx;
+    padding: 20rpx 30rpx;
+    text-align: center;
+}

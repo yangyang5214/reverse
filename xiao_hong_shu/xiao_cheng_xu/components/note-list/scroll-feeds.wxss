@@ -1,0 +1,4 @@
+.feeds {
+    position: relative;
+    width: 100%;
+}

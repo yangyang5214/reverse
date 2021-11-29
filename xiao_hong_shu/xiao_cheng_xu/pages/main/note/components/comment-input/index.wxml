@@ -1,0 +1,13 @@
+<view>
+    <view bindtouchend="handleHideInput" catchtap="handleHideInput" class="comment-input-mask" wx:if="{{hasMask}}"></view>
+    <view catchtap="handleHideInput" class="comment-input" style="{{inputStyle}}">
+        <image class="comment-avatar" src="{{avatar}}"></image>
+        <view class="comment-bar">
+            <input adjustPosition="{{adjustPosition}}" bindblur="handleInputBlur" bindconfirm="handleToComment" bindinput="handleInputValue" catchtap="handleClickInput" class="input-area" cursorSpacing="8" focus="{{focus}}" id="aaa" placeholder="{{commentHolder}}" placeholderClass="placeholder-class" value="{{content}}"></input>
+            <image class="emoji" src="../../../../../assets/images/emoji.png"></image>
+        </view>
+        <view catchtap="handleToComment" class="send-comment" data-no-blur="true" id="confirm-comment">
+      发送
+    </view>
+    </view>
+</view>

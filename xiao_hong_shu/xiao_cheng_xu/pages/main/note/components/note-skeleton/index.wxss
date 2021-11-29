@@ -1,0 +1,51 @@
+.skeleton {
+    background: #fff;
+    flex-direction: column;
+}
+
+.skeleton,.skeleton .user {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.skeleton .user {
+    height: 112rpx;
+}
+
+.skeleton .avatar {
+    background: #f5f8fa;
+    border-radius: 50%;
+    height: 40px;
+    margin-left: 30rpx;
+    width: 40px;
+}
+
+.skeleton .name {
+    background: #f5f8fa;
+    height: 34rpx;
+    margin-left: 20rpx;
+    width: 260rpx;
+}
+
+.skeleton .image {
+    background: #f5f8fa;
+    height: 562rpx;
+    width: 100%;
+}
+
+.skeleton .text-line {
+    background: #f5f8fa;
+    height: 34rpx;
+    margin-bottom: 16rpx;
+    width: 92%;
+}
+
+.skeleton .first-line {
+    margin-top: 50rpx!important;
+}
+
+.skeleton .third-line {
+    margin-right: 66rpx;
+    width: 83%!important;
+}

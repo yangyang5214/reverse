@@ -1,0 +1,7 @@
+{
+    "component": false,
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index",
+        "QuarkModal": "../../../components/modal/index"
+    }
+}

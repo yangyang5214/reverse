@@ -1,0 +1,13 @@
+<view class="page-container">
+    <add-mp-toast addMyMp="{{addMyMp}}" bind:closeAddMyMp="handleCloseAddMyMp" wx:if="{{addMyMp.isShowAddMp}}"></add-mp-toast>
+    <login-required bindcloseLoginModal="handleCloseModal" noNeedRelaunch="{{true}}" showLoginModal="{{showLoginModal}}" showLoginModalSource="{{showLoginModalSource}}"></login-required>
+    <navigation-bar navigationBarConfig="{{navigationBarConfig}}"></navigation-bar>
+    <view class="illegal-box" style="margin-top: {{navigationBarTrueHeight}}px;" wx:if="{{initDone&&(!note||note.type==='')}}">
+        <image src="https://ci.xiaohongshu.com/5104af68-57ed-4aac-b5c5-0941693954c9"></image>
+        <view class="illegal-text">{{illegalInfo.desc}}</view>
+    </view>
+    <page-normal-note fetchedRelatedNotes="{{fetchedRelatedNotes}}" illegalInfo="{{illegalInfo}}" imageTags="{{imageTags}}" isIphoneX="{{isIphoneX}}" isShowShareInfoBar="{{true}}" isShowSkeleton="{{isShowSkeleton}}" navigationBarTrueHeight="{{navigationBarTrueHeight}}" note="{{note}}" noteList="{{noteList}}" noteTags="{{noteTags}}" shareUserId="{{shareUserId}}" swiperHeight="{{swiperHeight}}" wx:if="{{note.type==='normal'}}"></page-normal-note>
+    <page-video-note bindchangeNote="handleChangeVideoFeedNote" bindfetchMore="handleFetchMoreVideoFeed" bindfocuseOn="handleFocuseOn" bindhandleSetVideoFeedListObjectValue="handleSetVideoFeedListObjectValue" bindhandleSetVideoFeedListValue="handleSetVideoFeedListValue" bindresetNote="handlehandleresetVideoFeedNote" note="{{note}}" noteId="{{noteId}}" videoNotes="{{videoFeedList}}" wx:if="{{note.type==='video'&&videoFeedList.length}}"></page-video-note>
+    <canvas canvasId="share-canvas" class="share-canvas"></canvas>
+    <canvas canvasId="share-moment-image" class="share-moment-image-canvas"></canvas>
+</view>

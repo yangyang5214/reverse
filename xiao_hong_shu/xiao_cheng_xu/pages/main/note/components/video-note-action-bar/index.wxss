@@ -1,0 +1,85 @@
+.action-bar {
+    background: #000;
+    box-sizing: border-box;
+    display: flex;
+    height: 116rpx;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    width: 100%;
+}
+
+.part-left,.part-right {
+    align-items: center;
+    background-color: none;
+    background: none;
+    display: flex;
+    height: 116rpx;
+    margin: 0;
+    padding: 0;
+}
+
+.part-left .share1 {
+    height: 60rpx;
+    width: 60rpx;
+}
+
+.part-left .share2 {
+    display: flex;
+    height: 56rpx;
+    justify-content: space-between;
+    width: 202rpx;
+}
+
+.part-left .share2 .wxlogo {
+    height: 56rpx;
+    width: 56rpx;
+}
+
+.part-left .share2 .share-text {
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 56rpx;
+}
+
+.part-left .share3 {
+    height: 56rpx;
+    width: 142rpx;
+}
+
+.part-right .item {
+    align-items: center;
+    display: flex;
+}
+
+.part-right .item image {
+    height: 48rpx;
+    width: 48rpx;
+}
+
+.part-right .item text {
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 48rpx;
+    margin-left: 8rpx;
+}
+
+.part-right .collect {
+    margin: 0 24rpx;
+}
+
+.part-right .launch-app-btn {
+    align-items: center;
+    background: #ff2442;
+    border-radius: 36rpx;
+    color: #fff;
+    display: flex;
+    font-size: 26rpx;
+    font-weight: 500;
+    height: 72rpx;
+    justify-content: center;
+    line-height: 36rpx;
+    margin-left: 20rpx;
+    width: 134rpx;
+}

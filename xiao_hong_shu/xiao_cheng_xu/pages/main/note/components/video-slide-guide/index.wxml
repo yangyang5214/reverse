@@ -1,0 +1,9 @@
+<view bindtouchstart="closeSlideGuide" class="video-slide-guide" wx:if="{{show}}">
+    <view class="video-slide-guide-content">
+        <image class="slider" src="https://fe-video-qc.xhscdn.com/picasso-editor/546b3024379e226bfad9c7a9105057c9697464d5.png"></image>
+        <image animation="{{sliderData}}" class="gesture" src="https://fe-video-qc.xhscdn.com/picasso-editor/bebc2c252245719b7660e3bfeb4055e9c409d5cd.png"></image>
+        <text class="video-slide-guide-text">
+      向上滑查看更多推荐
+    </text>
+    </view>
+</view>

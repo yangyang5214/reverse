@@ -1,0 +1,21 @@
+<view class="navigation-bar {{isIphoneX?'iphoneX':''}} {{type}}" style="{{navigationBarStyles}}" wx:if="{{!navigationBarConfig.isCover&&canUseCustomNavigationBar&&!noShowNavigationBar}}">
+    <view class="navigation-bar-inner">
+        <view class="navigation-bar-side left-side">
+            <view class="left-side-inner" style="{{leftSideInnerStyle}}" wx:if="{{navigationBarIconsNum>0}}">
+                <view bindtap="handleGoLastPage" class="navigation-icon-container" wx:if="{{showBackIcon}}">
+                    <image class="navigation-back-icon" src="../../../../../assets/images/4x_navigation_black_back.png" wx:if="{{type==='black'}}"></image>
+                    <image class="navigation-back-icon" src="../../../../../assets/images/4x_navigation_white_back.png" wx:if="{{type==='white'}}"></image>
+                </view>
+                <view class="navigation-gap" wx:if="{{navigationBarIconsNum>1}}"></view>
+                <view bindtap="handleHomePage" class="navigation-icon-container" wx:if="{{showHomePageIcon}}">
+                    <image class="navigation-home-icon" src="../../../../../assets/images/4x_navigation_black_home.png" wx:if="{{type==='black'}}"></image>
+                    <image class="navigation-back-icon" src="../../../../../assets/images/4x_navigation_white_home.png" wx:if="{{type==='white'}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="navigation-bar-center">
+      {{title}}
+    </view>
+        <view class="navigation-bar-side right-side"></view>
+    </view>
+</view>

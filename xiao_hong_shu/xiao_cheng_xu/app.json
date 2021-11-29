@@ -1,0 +1,74 @@
+{
+    "pages": [
+        "pages/main/home/index",
+        "pages/main/mine/index",
+        "pages/main/webview/index",
+        "pages/main/jump/page",
+        "pages/main/note/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "小红书",
+        "backgroundColor": "#FFF",
+        "backgroundTextStyle": "light",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 600
+    },
+    "tabBar": {
+        "borderStyle": "white",
+        "selectedColor": "#333333",
+        "backgroundColor": "#FFFFFF",
+        "color": "#999999",
+        "list": [
+            {
+                "pagePath": "pages/main/home/index",
+                "text": "首页",
+                "iconPath": "assets/images/tab-home.png",
+                "selectedIconPath": "assets/images/tab-home-selected.png"
+            },
+            {
+                "pagePath": "pages/main/mine/index",
+                "text": "我的",
+                "iconPath": "assets/images/tab-mine.png",
+                "selectedIconPath": "assets/images/tab-mine-selected.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "subPackages": [
+        {
+            "root": "pages/common/",
+            "pages": [
+                "download/index",
+                "not-found/index",
+                "lost/index",
+                "error/index",
+                "login/index",
+                "login/mobile-login",
+                "contact/index",
+                "feedback/index",
+                "privacy-policy/index"
+            ]
+        },
+        {
+            "root": "pages/secondary/",
+            "pages": [
+                "search/index",
+                "author/index",
+                "comment/index",
+                "verify/index",
+                "mine/setting"
+            ]
+        }
+    ],
+    "navigateToMiniProgramAppIdList": [
+        "wx4554c1e6dfadc8ed",
+        "wx5a3a7366fd07e119"
+    ],
+    "debug": true
+}

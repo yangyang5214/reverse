@@ -1,0 +1,17 @@
+.error-panel {
+    text-align: center;
+    width: 100%;
+}
+
+.error-panel .not-found-img {
+    height: 252rpx;
+    margin: 80rpx auto 0;
+    width: 240rpx;
+}
+
+.error-panel .error-panel__title {
+    color: #999;
+    font-size: 28rpx;
+    margin: 20rpx 0 80rpx;
+    text-align: center;
+}

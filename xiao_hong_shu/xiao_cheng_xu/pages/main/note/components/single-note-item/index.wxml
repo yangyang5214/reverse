@@ -1,0 +1,22 @@
+<view style="{{noteItemHeight&&!isSettingHeight?'min-height:'+noteItemHeight+'px':''}}">
+    <view class="content">
+        <note-image-swiper authorId="{{note.user&&note.user.id}}" bind:noteImageSwitched="handleNoteImageSwitched" imageTags="{{imageTags}}" images="{{note.imageList}}" noteId="{{note.id}}" swiperHeight="{{swiperHeight}}"></note-image-swiper>
+        <image-pagination current="{{current}}" totalImgCount="{{totalImgCount}}" wx:if="{{note.imageList.length>1}}"></image-pagination>
+        <profile note="{{note}}" poi="{{poi}}" user="{{user}}"></profile>
+        <view class="note-title" wx:if="{{note.title||note.desc||note.inCensor}}">
+            <text>{{note.title||note.desc}}</text>
+            <view class="censorship-icon" wx:if="{{note.inCensor}}">
+                <image src="https://ci.xiaohongshu.com/a526e64c-1f77-4038-87a4-6151e3e012f8@r_320w_320h.jpg"></image>
+                <text>{{note.censorTip||'审核中'}}</text>
+            </view>
+        </view>
+        <note-text ats="{{note.ats}}" desc="{{note.desc}}" hashTag="{{note.hashTags}}" noteTags="{{noteTags}}"></note-text>
+        <note-action-bar bind:triggerShowCommentInput="handleShowCommentInput" bind:triggerTrackAction="handleTrackAction" class="note-action-bar {{isIOS?'':'and-border'}}" collected="{{note.isCollected}}" collectedCount="{{note.collects}}" commentCount="{{isAddComment?commentsTotal:note.comments}}" illegalInfo="{{note.illegalInfo}}" liked="{{note.isLiked}}" likedCount="{{note.likes}}" noteId="{{note.id}}" sharedCount="{{note.shareCount}}" supportComment="{{supportComment}}"></note-action-bar>
+        <comment-input authorId="{{note.user&&note.user.id}}" bind:blur="handleHideCommentInput" bind:commented="handleCreateComment" bind:hideCommentInput="handleHideCommentInput" focus="{{commentInputFocus}}" noteId="{{note.id}}" wx:if="{{showCommentInput}}"></comment-input>
+        <note-comment commentList="{{isAddComment?subComment:commentList}}" commentsCount="{{isAddComment?commentsTotal:note.comments}}" noteId="{{note.id}}"></note-comment>
+        <view class="bottom-box">
+            <note-date time="{{note.time}}"></note-date>
+            <cooperate-binds cooperateBinds="{{note.cooperateBinds}}" wx:if="{{note.cooperateBinds.length!==0}}"></cooperate-binds>
+        </view>
+    </view>
+</view>

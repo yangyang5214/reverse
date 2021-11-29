@@ -1,0 +1,24 @@
+.submit-container {
+    -webkit-tap-highlight-color: none;
+    align-items: center;
+    background-color: none;
+    background: none;
+    border-radius: 0;
+    color: inherit;
+    display: flex;
+    font-size: inherit;
+    height: 100%;
+    justify-content: center;
+    line-height: inherit;
+    padding: 0;
+    text-align: inherit;
+    width: 100%;
+}
+
+.submit-container:after {
+    border: none;
+}
+
+.submit-container.button-hover {
+    background-color: none;
+}

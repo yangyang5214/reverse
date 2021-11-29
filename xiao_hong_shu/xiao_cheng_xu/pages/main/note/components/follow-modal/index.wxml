@@ -1,0 +1,20 @@
+<cover-view class="modal {{showModal?'show':''}}" style="background: {{background}};">
+    <cover-view class="modal-main" style="width:{{modalWidth}}rpx">
+        <cover-view class="modal-header"></cover-view>
+        <cover-view class="modal-content">
+            <cover-view class="content-text">
+        确认不再关注？
+      </cover-view>
+        </cover-view>
+        <cover-view class="modal-footer" style="width:{{modalWidth}}rpx">
+            <cover-view class="button-box">
+                <cover-view bindtap="handleTabCloseModal" class="close-button">
+          取消
+        </cover-view>
+                <cover-view bindtap="handleTabConfirm" class="confirm-button">
+          确认
+        </cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+</cover-view>

@@ -1,0 +1,7 @@
+{
+    "component": false,
+    "usingComponents": {
+        "QuarkToast": "../../../components/toast/index",
+        "QuarkPage": "../../../components/page/index"
+    }
+}

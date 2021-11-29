@@ -1,0 +1,49 @@
+<main-page navigationBarConfig="{{navigationBarConfig}}">
+    <view class="container">
+        <login-required bind:closeLoginModal="handleCloseLoginModal" showLoginModal="{{showLoginModal}}" showLoginModalSource="{{showLoginModalSource}}"></login-required>
+        <view class="top-skeleton-container" wx:if="{{showTopContainerSkeleton}}">
+            <view class="top-skeleton-searchbar">
+                <view class="top-skeleton-searchbar-inner skeleton-bg"></view>
+            </view>
+            <view class="top-skeleton-category">
+                <view class="top-skeleton-category-item skeleton-bg" wx:for="{{skeletonsCategoryList}}" wx:key="index"></view>
+            </view>
+        </view>
+        <block wx:if="{{!showTopContainerSkeleton}}">
+            <SearchBar bind:goSearchPage="handleSearch" class="searchbar" placeHolder="{{searchPlaceholder}}" type="home"></SearchBar>
+            <FixedConatiner class="category-list">
+                <scroll-view>
+                    <view bindtap="handleTapCategory" class="category {{index===categoryActiveIndex?'active':''}}" data-index="{{index}}" data-item="{{item}}" wx:for="{{categoryList}}" wx:key="index">
+                        <view>
+              {{item.name}}
+            </view>
+                    </view>
+                </scroll-view>
+            </FixedConatiner>
+        </block>
+        <PullDown bind:scrollBottom="handleScrollBottom" bind:scrollPullDown="handleScrollPullDown" isLoadMoreNoteList="{{isLoadMoreNoteList}}" isRefreshing="{{isRefreshing}}" scrollIntoView="{{scrollIntoViewId}}" style="width: 100%;">
+            <view class="home-page-main-container">
+                <view class="feeds-skeleton-container" wx:if="{{showFeedsSkeleton}}">
+                    <view class="top-skeleton-activity skeleton-bg" wx:if="{{isShowBanner}}"></view>
+                    <view class="feeds-skeleton-item" wx:for="{{skeletonsNoteList}}" wx:for-index="skeletonsIndex" wx:for-item="skeletonsItem" wx:key="index">
+                        <view class="feeds-skeleton-image skeleton-bg"></view>
+                        <view class="skeleton-desc skeleton-bg"></view>
+                        <view class="feeds-skeleton-info">
+                            <view class="skeleton-avatar skeleton-bg"></view>
+                            <view class="skeleton-name skeleton-bg"></view>
+                            <view class="skeleton-like skeleton-bg"></view>
+                        </view>
+                    </view>
+                </view>
+                <block wx:if="{{!showFeedsSkeleton}}">
+                    <QuarkForm bindsubmit="handleTapBanner" wx:if="{{isShowBanner}}">
+                        <image class="activity-entry" src="{{banner.image}}"></image>
+                    </QuarkForm>
+                    <view id="page-scroll-start"></view>
+                    <ScrollFeeds bind:noteItemTap="handleNoteItemTap" canLike="{{canLike}}" isBurdockApi="{{true}}" isFirstLogin="{{isFirstLogin}}" isNeverFillInRecommendTagForm="{{isNeverFillInRecommendTagForm}}" notes="{{noteList}}" scrollTop="{{scrollTop}}" wx:if="noteList.length"></ScrollFeeds>
+                </block>
+            </view>
+        </PullDown>
+    </view>
+    <AddMpToast bind:MaskTap="handleMaskTap" wx:if="{{isShowAddMp}}"></AddMpToast>
+</main-page>

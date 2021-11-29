@@ -1,0 +1,3 @@
+<view class="fixed-container" style="margin-top: {{marginTop}};">
+    <slot></slot>
+</view>

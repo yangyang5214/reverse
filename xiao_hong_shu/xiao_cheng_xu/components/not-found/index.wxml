@@ -1,0 +1,6 @@
+<view class="not-found">
+    <image class="not-found-img {{type}}" src="{{objC.imageUrl}}"></image>
+    <view class="not-found__title">
+    {{objC.title}}
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<view class="item {{trackClassName}} eaglet-impression" data-eaglet-identifier="{{note.impression.id}}" data-eaglet-impression="{{note.impression.eagletImpression}}" data-eaglet-offset="{{note.impression.offset}}" id="{{note.trackData}}" wx:if="{{note.type!=='interest'}}">
+    <view bindtap="handleNoteItemTap" class="item-inner-container">
+        <view class="submit-container">
+            <view class="image-container">
+                <image class="item-image {{normalImageClass}}" src="{{note.cover.url}}" style="height:{{note.cover.height/note.cover.width*344}}rpx"></image>
+                <image bindload="handlGifLoaded" class="item-image {{gifImageClass}}" lazyLoad="{{isLazyLoad}}" src="{{note.cover.gifUrl}}" style="height:{{note.cover.height/note.cover.width*344}}rpx" wx:if="{{note.cover.gifUrl}}"></image>
+                <image class="video-sign" src="https://ci.xiaohongshu.com/c38c3f63-c37b-49eb-bd6d-91226bc9cd98" wx:if="{{note.type==='video'}}"></image>
+            </view>
+            <view class="item-content">
+                <view class="item-recommend" wx:if="{{note.recommend.desc&&note.recommend.icon}}">
+                    <image class="recommend-icon" src="{{note.recommend.icon}}"></image>
+                    <view class="recommend-desc">
+              {{note.recommend.desc}}
+            </view>
+                </view>
+                <view class="item-title" wx:if="{{note.title||note.desc}}">
+            {{note.title||note.desc}}
+          </view>
+            </view>
+        </view>
+        <view class="detail-info-container">
+            <view class="item-author">
+                <view>
+                    <view class="submit-container inline item-author-inner" formType="submit">
+                        <view class="item-author-box" wx:if="{{note.user.image||note.user.images}}">
+                            <image class="item-author-img" src="{{note.user.image||note.user.images}}"></image>
+                        </view>
+                        <view class="item-author-name">
+                {{note.user.nickname}}
+              </view>
+                    </view>
+                </view>
+                <view class="item-like">
+                    <view class="submit-container inline" formType="submit">
+                        <image src="https://ci.xiaohongshu.com/1bed97f8-bd71-4613-bd3c-7e1cba9ae30e" wx:if="{{note.isLiked}}"></image>
+                        <image src="https://ci.xiaohongshu.com/add4a932-2fb4-4e1c-afa6-6247dbe02754" wx:if="{{!note.isLiked}}"></image>
+              {{note.likes}}
+            </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

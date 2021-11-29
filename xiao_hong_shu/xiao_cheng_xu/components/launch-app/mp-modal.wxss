@@ -1,0 +1,78 @@
+.modal {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+
+.show {
+    display: block;
+}
+
+.modal-main {
+    background-color: #fff;
+    border-radius: 6px;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content-text {
+    padding: 60rpx 0;
+    text-align: center;
+}
+
+.content-text cover-view {
+    color: #333;
+    display: block;
+    font-size: 26rpx;
+    line-height: 42rpx;
+    margin: 0 30rpx;
+}
+
+.content-text .red {
+    font-weight: 500;
+}
+
+.download-app {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15rpx;
+    padding-top: 45rpx;
+}
+
+.download-app cover-image {
+    height: 162rpx;
+    width: 264rpx;
+}
+
+.footer-button {
+    border-right: 1px solid #e6e6e6;
+    color: #333;
+    font-weight: 400;
+    height: 88rpx;
+}
+
+.contact-button,.footer-button {
+    font-size: 30rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 265rpx;
+}
+
+.contact-button {
+    border: none!important;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+
+.contact-button .contact-button-text {
+    color: #59c4ff;
+    font-weight: 500;
+}

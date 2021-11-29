@@ -1,0 +1,40 @@
+.share-info-container {
+    align-items: center;
+    background: rgba(51,51,51,.7);
+    box-sizing: border-box;
+    display: flex;
+    height: 112rpx;
+    justify-content: space-between;
+    padding: 16rpx 30rpx;
+    position: fixed;
+    width: 100%;
+    z-index: 10010;
+}
+
+.share-info-container .left-part {
+    display: flex;
+}
+
+.avatar {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.user-txt {
+    margin-left: 12rpx;
+}
+
+.user-txt .nickname {
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 500;
+    line-height: 36rpx;
+}
+
+.user-txt .desc {
+    color: #fff;
+    font-size: 22rpx;
+    font-weight: 400;
+    line-height: 26rpx;
+    margin-top: 10rpx;
+}

@@ -1,0 +1,13 @@
+{
+    "component": false,
+    "usingComponents": {
+        "Quark-icon": "../../../components/icon/index",
+        "Quark-search": "../../../components/search/index",
+        "QuarkPage": "../../../components/page/index",
+        "SearchResult": "./components/search-result",
+        "SearchIndex": "./components/search-index",
+        "Quark-x-not-found": "../../../components/not-found/index",
+        "Search-sort-panel": "../components/search-sort-panel/index",
+        "QuarkForm": "../../../components/form/index"
+    }
+}

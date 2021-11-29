@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "QuarkForm": "../../components/form/index",
+        "QuarkFixed": "../../components/fixed/index"
+    }
+}

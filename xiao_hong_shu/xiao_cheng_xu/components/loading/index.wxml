@@ -1,0 +1,6 @@
+<view class="loading-content">
+    <image class="loading {{loadingClass}}" src="{{loadingSrc}}" wx:if="{{type}}"></image>
+    <view class="loading-text" wx:if="{{text}}">
+    {{text}}
+  </view>
+</view>

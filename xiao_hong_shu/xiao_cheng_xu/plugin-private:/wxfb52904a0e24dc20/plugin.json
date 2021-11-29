@@ -1,0 +1,6 @@
+{
+    "publicComponents": {
+        "captcha": "components/smcp/captcha-component"
+    },
+    "main": "index.js"
+}

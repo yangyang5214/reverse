@@ -1,0 +1,24 @@
+.note-list .note-list-show {
+    display: flex;
+    padding-bottom: 60rpx;
+}
+
+.note-list__column {
+    box-sizing: border-box;
+    flex: 1;
+    float: left;
+}
+
+.note-list__column_left {
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.note-list__column_right {
+    margin-right: 10rpx;
+}
+
+.feeds {
+    position: relative;
+    width: 100%;
+}

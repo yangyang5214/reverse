@@ -1,0 +1,5 @@
+<view animation="{{animationData}}" class="quark-toast-container" wx:if="{{display}}">
+    <view class="quark-toast">
+    {{content}}
+  </view>
+</view>

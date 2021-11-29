@@ -1,0 +1,5 @@
+.quark-icon {
+    display: inline-block;
+    height: 40rpx;
+    width: 40rpx;
+}

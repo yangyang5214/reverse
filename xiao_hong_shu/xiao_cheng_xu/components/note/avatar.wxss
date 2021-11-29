@@ -1,0 +1,20 @@
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container .avatar-container-inner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.avatar-container .avatar {
+    border-radius: 50%;
+}
+
+.avatar-container .verified {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}

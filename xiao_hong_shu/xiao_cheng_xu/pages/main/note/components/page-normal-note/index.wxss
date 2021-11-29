@@ -1,0 +1,47 @@
+.page-container-inner {
+    padding-bottom: 88rpx;
+}
+
+.x-container {
+    padding-bottom: 156rpx!important;
+}
+
+.illegal-box {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 490rpx;
+    justify-content: start;
+    width: 100%;
+}
+
+.illegal-box image {
+    height: 180rpx;
+    margin-bottom: 30rpx;
+    margin-top: 100rpx;
+    width: 180rpx;
+}
+
+.illegal-text {
+    color: #999;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.related-notes-title {
+    color: #666;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 92rpx;
+    line-height: 92rpx;
+    margin-left: 30rpx;
+}
+
+.bottom-space {
+    height: 80rpx;
+}

@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "video-content-expand": "../video-content-expand/index",
+        "video-content-unexpand": "../video-content-unexpand/index"
+    }
+}

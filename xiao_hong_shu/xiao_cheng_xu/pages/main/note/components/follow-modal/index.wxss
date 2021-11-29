@@ -1,0 +1,63 @@
+.modal {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-main {
+    background-color: #fff;
+    border-radius: 6px;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content-text {
+    color: #030303;
+    font-size: 34rpx;
+    font-style: PingFang SC;
+    font-weight: 600;
+    height: 126rpx;
+    line-height: 126rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.button-box {
+    border-top: 1rpx solid #e3e3e3;
+    width: 100%;
+}
+
+.close-button {
+    border-right: 1rpx solid #e3e3e3;
+    box-sizing: border-box;
+    font-style: PingFang SC;
+    font-weight: 300;
+}
+
+.close-button,.confirm-button {
+    color: #0076ff;
+    font-size: 34rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    width: 271rpx;
+}
+
+.confirm-button {
+    border: none!important;
+    bottom: 0;
+    font-weight: 400;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}

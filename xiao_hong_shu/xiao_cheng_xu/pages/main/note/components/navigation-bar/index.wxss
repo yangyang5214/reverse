@@ -1,0 +1,84 @@
+.navigation-bar {
+    background: #fff;
+    color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10010;
+}
+
+.navigation-bar.white .navigation-icon-container {
+    padding-right: 0;
+}
+
+.navigation-bar.white .left-side-inner {
+    background: rgba(0,0,0,.15);
+}
+
+.navigation-bar .navigation-bar-inner {
+    align-items: center;
+    display: flex;
+    height: 88rpx;
+    line-height: 88rpx;
+    position: relative;
+    width: 100%;
+}
+
+.navigation-bar .navigation-bar-side {
+    box-sizing: border-box;
+    height: 64rpx;
+    margin: 0 8rpx 8rpx;
+    position: relative;
+    width: 174rpx;
+}
+
+.navigation-bar .left-side {
+    margin-left: 30rpx;
+}
+
+.navigation-bar .right-side {
+    margin-right: 30rpx;
+}
+
+.navigation-bar .left-side-inner {
+    border: .5px solid rgba(255,255,255,.2);
+    border-radius: 36rpx;
+    display: flex;
+    height: 64rpx;
+    max-width: 173rpx;
+    position: absolute;
+}
+
+.navigation-bar .navigation-bar-center {
+    flex: 1;
+    font-size: 32rpx;
+    font-weight: 500;
+    line-height: 88rpx;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navigation-gap {
+    background: rgba(255,255,255,.2);
+    height: 36rpx;
+    left: 49%;
+    position: absolute;
+    top: 15rpx;
+    width: 1px;
+}
+
+.navigation-icon-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    padding-right: 5rpx;
+    width: 88rpx;
+}
+
+.navigation-icon-container .navigation-back-icon,.navigation-icon-container .navigation-home-icon {
+    height: 72rpx;
+    width: 72rpx;
+}

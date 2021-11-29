@@ -1,0 +1,12 @@
+.cooperate-binds {
+    color: #999;
+    display: inline-block;
+    font-size: 22rpx;
+    font-style: PingFang SC;
+    line-height: 32rpx;
+    padding: 20rpx 0;
+}
+
+.cooperate-name {
+    color: #333;
+}

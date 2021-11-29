@@ -1,0 +1,12 @@
+<view class="feeds">
+    <view class="note-list">
+        <view class="note-list-show">
+            <view class="note-list__column note-list__column_left">
+                <NoteListLeftItem bind:gifLoaded="handleGifLoaded" bind:noteItemTap="handleNoteItemTap" canLike="{{canLike}}" index="{{index}}" item="{{item}}" wx:for="{{leftNotes}}" wx:key="index"></NoteListLeftItem>
+            </view>
+            <view class="note-list__column note-list__column_right">
+                <NoteListRightItem bind:gifLoaded="{{handleGifLoaded}}" canLike="{{canLike}}" index="{{index}}" item="{{item}}" wx:for="{{rightNotes}}" wx:key="index"></NoteListRightItem>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,314 @@
+.container {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.container .user-info-container {
+    position: relative;
+    width: 100%;
+}
+
+.container .banner-image-container {
+    background-position: top;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.container .banner-image-bg-container {
+    background: rgba(0,0,0,.55);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.container .user-info-detail-container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.container .user-basic-info-container {
+    background: linear-gradient(180deg,rgba(122,110,105,0),#7a6e69);
+    padding-top: 206rpx;
+    width: 100%;
+}
+
+.container .user-basic-info {
+    align-items: center;
+    color: var(--WHITE);
+    display: flex;
+    flex-direction: row;
+    height: 160rpx;
+    justify-content: center;
+    width: 100%;
+}
+
+.container .user-basic-info .user-avatar {
+    display: block;
+    height: 160rpx;
+    margin-left: 30rpx;
+    position: relative;
+    width: 160rpx;
+}
+
+.container .user-basic-info .user-avatar .avatar {
+    border: 1px solid #fff;
+    border-radius: 160rpx;
+    display: block;
+    height: 160rpx;
+    width: 160rpx;
+}
+
+.container .user-basic-info .user-account-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.container .user-basic-info .user-account-info .user-nickname {
+    font-size: 40rpx;
+    font-weight: 600;
+    line-height: 48rpx;
+}
+
+.container .user-basic-info .user-account-info .user-red-id {
+    color: #fff;
+    font-size: 20rpx;
+    line-height: 24rpx;
+    margin-top: 8rpx;
+    opacity: .8;
+}
+
+.container .user-basic-info .user-account-info .user-labels {
+    display: flex;
+    margin-top: 8rpx;
+}
+
+.container .user-basic-info .user-account-info .label-item {
+    align-items: center;
+    background: rgba(255,255,255,.2);
+    border-radius: 41px;
+    display: flex;
+    font-size: 20rpx;
+    font-weight: 500;
+    height: 36rpx;
+    margin-right: 10rpx;
+    max-width: 220rpx;
+    padding: 0 16rpx;
+    text-overflow: ellipsis;
+    white-space: norwap;
+}
+
+.container .user-basic-info .user-account-info .gender image {
+    height: 32rpx;
+    width: 24rpx;
+}
+
+.container .user-basic-info .user-account-info .level {
+    display: inline;
+    display: flex;
+    flex-direction: row;
+    font-size: 22rpx;
+    height: 36rpx;
+    justify-content: left;
+    line-height: 32rpx;
+    width: 110rpx;
+}
+
+.container .user-basic-info .user-account-info .level .level-text {
+    color: var(--WHITE);
+    font-weight: var(--FONT-WEIGHT-REGULAR);
+    margin-left: 6rpx;
+}
+
+.container .user-basic-info .user-account-info .level .level-img {
+    display: inline-block;
+    height: 24rpx;
+    justify-content: center;
+    width: 24rpx;
+}
+
+.container .user-more-info {
+    color: var(--WHITE);
+    margin-top: 40rpx;
+}
+
+.container .user-more-info .user-verify-info {
+    width: 100%;
+}
+
+.container .user-more-info .user-verify-info-inner {
+    align-items: center;
+    display: flex;
+    height: 30rpx;
+    margin: 0rpx 30rpx 11rpx;
+}
+
+.container .user-more-info .user-verify-info-inner .icon {
+    height: 20rpx;
+    margin-right: 10rpx;
+    width: 20rpx;
+}
+
+.container .user-more-info .user-verify-info-inner .text {
+    color: var(--WHITE);
+    font-size: 20rpx;
+}
+
+.container .user-more-info .user-desc {
+    font-size: 24rpx;
+    line-height: 36rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.container .user-more-info .user-data {
+    align-items: center;
+    display: flex;
+    height: 68rpx;
+    margin-top: 40rpx;
+}
+
+.container .user-more-info .user-data-total {
+    display: inline-flex;
+    height: 68rpx;
+    margin-left: 30rpx;
+}
+
+.container .user-more-info .user-data-total-item {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 36rpx;
+}
+
+.container .user-more-info .user-data-total-item .detail-top-number {
+    font-size: 28rpx;
+    font-weight: 600;
+    line-height: 36rpx;
+    text-align: center;
+}
+
+.container .user-more-info .user-data-total-item .detail-top-text {
+    font-size: 22rpx;
+    line-height: 26rpx;
+    margin-top: 6rpx;
+    opacity: .8;
+    text-align: center;
+}
+
+.container .user-more-info .user-action {
+    align-items: center;
+    display: inline-flex;
+    flex: 1;
+    height: 68rpx;
+    margin-right: 30rpx;
+}
+
+.container .tab-bar-bg {
+    background: #7a6e69;
+    height: 74rpx;
+    margin-top: -1px;
+    width: 100%;
+}
+
+.container .tab-bar {
+    align-items: center;
+    background: var(--WHITE);
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx;
+    box-shadow: 0 4rpx 12rpx 0 rgba(0,0,0,.04);
+    display: flex;
+    flex-direction: row;
+    height: 88rpx;
+    justify-content: center;
+    margin-top: -37rpx;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.container .tab-bar .mine-user-at-ta,.container .tab-bar .mine-user-collect {
+    margin-left: 120rpx;
+}
+
+.container .tab-bar .tab-bar-text {
+    color: var(--GREY3);
+    font-size: 30rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: relative;
+}
+
+.container .tab-bar .tab-bar-text .icon-lock {
+    height: 24rpx;
+    left: -28rpx;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20rpx;
+}
+
+.container .tab-bar .tab-bar-text.isTaped {
+    color: var(--GREY1);
+    font-weight: var(--FONT-WEIGHT-MEDIUM);
+}
+
+.container .tab-bar .tab-bar-choose-bottom {
+    background: var(--RED1);
+    border-radius: 4rpx;
+    height: 0;
+    margin-top: 4rpx;
+}
+
+.container .tab-bar .tab-bar-choose-bottom.isTaped {
+    height: 4rpx;
+}
+
+.container .notes {
+    padding-top: 10rpx;
+    width: 100%;
+}
+
+.container .notes .bottom-end {
+    color: var(--GREY2);
+    font-size: 22rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.container .iphoneX {
+    padding-bottom: 34rpx;
+}
+
+.no-login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.no-login .no-login-img {
+    display: block;
+    height: 128rpx;
+    margin: 100rpx auto 24rpx;
+    width: 170rpx;
+}
+
+.no-login .no-login__title {
+    width: 370rpx;
+}
+
+.no-login .no-login__title view {
+    display: inline;
+    font-size: 26rpx;
+    font-weight: var(--FONT-WEIGHT-REGULAR);
+}
+
+.no-login .no-login__title .tap-login {
+    color: var(--NAVY);
+}

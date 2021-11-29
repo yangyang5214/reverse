@@ -1,0 +1,6 @@
+<view class="launch-app-container">
+    <MpModal background="rgba(0, 0, 0, 0.6)" bind:closeModal="handleCloseModal" modalWidth="530rpx" showModal="{{showModal}}"></MpModal>
+    <button appParameter="{{launchAppParameter}}" binderror="handleLaunchAppError" bindtap="handleTapLaunchApp" class="slot" formType="submit" openType="{{openType}}" sendMessageTitle="{{customMessageCardInfo.title}}" sessionFrom="{{customMessageReplyInfo.sessionFrom||'wxapp'}}" showMessageCard="true">
+        <slot></slot>
+    </button>
+</view>

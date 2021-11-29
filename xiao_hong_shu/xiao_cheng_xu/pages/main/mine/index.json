@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index",
+        "UserInfoComponent": "../../../components/user/user-info"
+    }
+}

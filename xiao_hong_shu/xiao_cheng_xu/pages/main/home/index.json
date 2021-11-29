@@ -1,0 +1,16 @@
+{
+    "navigationBarTitleText": "首页",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "main-page": "../../../components/page/index",
+        "FixedConatiner": "../../../components/fixed/index",
+        "SearchBar": "../../../components/search/index",
+        "ScrollFeeds": "../../../components/note-list/scroll-feeds",
+        "QuarkToast": "../../../components/toast/index",
+        "AddMpToast": "../../../components/toast/add-mp-toast",
+        "QuarkForm": "../../../components/form/index",
+        "PullDown": "../../../components/pull-down/index",
+        "LaunchApp": "../../../components/launch-app/index",
+        "login-required": "../../../components/login-required/index"
+    }
+}

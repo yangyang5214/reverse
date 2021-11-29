@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "note-list-item": "./note-list-item/index"
+    }
+}

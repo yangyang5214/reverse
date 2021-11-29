@@ -1,0 +1,3 @@
+.fixed-container {
+    width: 100%;
+}

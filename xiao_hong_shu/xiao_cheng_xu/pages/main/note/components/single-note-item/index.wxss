@@ -1,0 +1,63 @@
+.content {
+    background: #fff;
+}
+
+.content .bottom-box {
+    display: flex;
+    padding: 0 30rpx;
+}
+
+.note-title {
+    color: #333;
+    font-size: 34rpx;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48rpx;
+    max-width: 690rpx;
+    overflow: hidden;
+    padding: 0rpx 30rpx 16rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.note-title text {
+    float: left;
+}
+
+.note-title .censorship-icon {
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 12PX;
+    display: flex;
+    float: left;
+    height: 48rpx;
+    margin-left: 10rpx;
+    padding: 0 20rpx;
+}
+
+.note-title .censorship-icon image {
+    height: 32rpx;
+    width: 32rpx;
+}
+
+.note-title .censorship-icon text {
+    color: #999;
+    font-size: 26rpx;
+    margin-left: 10rpx;
+}
+
+.note-action-bar {
+    background: #fff;
+    border-top: 1rpx solid #e6e6e6;
+    bottom: 0;
+    height: 88rpx;
+    left: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    width: 100%;
+    z-index: 10010;
+}
+
+.and-border {
+    border-top: 2rpx solid #f5f5f5!important;
+}

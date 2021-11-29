@@ -1,0 +1,24 @@
+<view class="page-container">
+    <view class="page-container-inner">
+        <video-slide-guide bindcloseSlideGuide="closeSlideGuide" wx:if="{{showSlideGuide}}"></video-slide-guide>
+        <swiper autoplay="{{autoplay}}" bindanimationfinish="handleAnimationFnish" bindchange="handleChange" class="video-container" current="{{current}}" duration="{{duration}}" easingFunction="{{animation}}" indicatorDots="{{indicatorDots}}" vertical="{{vertical}}">
+            <swiper-item class="swiper-item" itemId="{{item.video.id}}" wx:for="{{videoNotes}}" wx:for-index="itemIndex" wx:key="id">
+                <view class="swiper-item-container" style="{{videoStyle}}">
+                    <video autoplay="{{currentItemIndex===itemIndex}}" bindplay="handleVideoPlay" catchtap="handleVideo" class="video-item" controls="{{false}}" data-id="{{item.id}}" enableProgressGesture="{{true}}" id="{{item.id}}" loop="{{currentItemIndex===itemIndex}}" muted="{{isMuted}}" objectFit="{{item.video.width>item.video.height?'contain':'cover'}}" showCenterPlayBtn="{{false}}" showPlayBtn="{{false}}" showProgress="{{true}}" src="{{item.video.url}}" wx:if="{{currentItemIndex===itemIndex||currentItemIndex-itemIndex===-1||currentItemIndex-itemIndex===1}}">
+                        <video-content bindfocuse="handleFocuse" note="{{item}}"></video-content>
+                    </video>
+                    <view class="video-poster-image size-{{item.video.width>item.video.height?'contain':'cover'}}" wx:if="{{currentItemIndex!==itemIndex&&currentItemIndex-itemIndex!==-1&&currentItemIndex-itemIndex!==1}}"></view>
+                    <image catchtap="handleVideo" class="video-play-icon" src="../../../../../assets/images/play-icon.png" wx:if="{{currentItemIndex===itemIndex&&videoIsPause}}"></image>
+                </view>
+                <note-action-bar bindactionChange="handleActionChange" bindshowComment="handleShowComment" class="video-action-bar-section" feedIndex="{{itemIndex}}" note="{{item}}" videoNoteId="{{videoNoteId}}"></note-action-bar>
+            </swiper-item>
+        </swiper>
+        <video-comment bindcloseComments="handleComments" bindfetchMoreComment="handleFetchMoreComment" commentsData="{{commmentsData}}" isNoMoreComments="{{isNoMoreComments}}" wx:if="{{showComments}}"></video-comment>
+        <view class="error-box" wx:if="{{isError}}">
+            <image class="error-icon" src="./assets/error.png"></image>
+            <view class="error-desc">{{errorMsg}}，无法查看</view>
+            <view class="error-desc">去“首页”查看更多精彩内容吧</view>
+            <view catchtap="handleErrorBtn" class="error-btn">去首页</view>
+        </view>
+    </view>
+</view>

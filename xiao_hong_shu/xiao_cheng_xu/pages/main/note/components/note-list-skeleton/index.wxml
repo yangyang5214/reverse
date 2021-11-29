@@ -1,0 +1,30 @@
+<view class="related-skeleton">
+    <view class="left">
+        <view class="item" wx:for="{{[4,3,2,4]}}" wx:key="item">
+            <view class="top-box" style="height: {{300+item*40}}rpx;"></view>
+            <view class="desc-box"></view>
+            <view class="desc-box"></view>
+            <view class="info-box">
+                <view class="author-box">
+                    <view class="avatar-box"></view>
+                    <view class="nickname-box"></view>
+                </view>
+                <view class="like-box"></view>
+            </view>
+        </view>
+    </view>
+    <view class="right">
+        <view class="item" wx:for="{{[1,2,4,3]}}" wx:key="item">
+            <view class="top-box" style="height: {{300+item*40}}rpx;"></view>
+            <view class="desc-box"></view>
+            <view class="desc-box"></view>
+            <view class="info-box">
+                <view class="author-box">
+                    <view class="avatar-box"></view>
+                    <view class="nickname-box"></view>
+                </view>
+                <view class="like-box"></view>
+            </view>
+        </view>
+    </view>
+</view>

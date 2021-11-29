@@ -1,0 +1,73 @@
+.action-bar {
+    height: 88rpx;
+    position: relative;
+}
+
+.action-bar .like {
+    margin-left: 26rpx;
+}
+
+.action-bar .share {
+    display: flex;
+    left: 170rpx;
+    position: absolute;
+    top: 16rpx;
+}
+
+.action-bar .right-share {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 30rpx;
+    top: 16rpx;
+}
+
+.action-bar .right-share button,.action-bar .share button {
+    border: none;
+    height: 56rpx;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 56rpx;
+}
+
+.action-bar .right-share .share-text {
+    color: #333;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.action-bar .right-share button:after,.action-bar .share button:after {
+    border: none;
+}
+
+.action-bar .item image {
+    height: 56rpx;
+    width: 56rpx;
+}
+
+.action-bar .item text {
+    color: #333;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 30rpx;
+    margin-left: 10rpx;
+}
+
+.action-bar .comment {
+    left: 30rpx;
+    position: absolute;
+    top: 16rpx;
+}
+
+.action-box {
+    align-items: center;
+    display: flex;
+}
+
+.right-box {
+    display: flex;
+    position: absolute;
+    right: 30rpx;
+    top: 16rpx;
+}

@@ -1,0 +1,13 @@
+<view catchtouchmove="handleStopBubble" class="modal {{showModal?'show':''}}">
+    <view class="modal-main">
+        <view class="modal-header">
+            <slot name="modal-header">none</slot>
+        </view>
+        <view class="modal-content">
+            <slot name="modal-content">content</slot>
+        </view>
+        <view class="modal-footer">
+            <slot name="modal-footer">none</slot>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="video-content {{isExpand?'expand':''}}">
+    <view class="video-content-box-background"></view>
+    <video-content-unexpand catch:expand="handleExpand" catch:focuse="handleFocuseOn" catch:setUnexpandHeight="setUnexpandHeight" note="{{note}}" showExpand="{{showExpand}}" wx:if="{{!isExpand}}"></video-content-unexpand>
+    <video-content-expand catch:focuse="handleFocuseOn" catch:getTextHeight="getTextHeight" catch:packUp="handlePackup" note="{{note}}" unexpandHeight="{{unexpandHeight}}" wx:else></video-content-expand>
+</view>

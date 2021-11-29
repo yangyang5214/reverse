@@ -1,0 +1,12 @@
+<view class="skeleton" wx:if="{{isShowSkeleton}}">
+    <view class="user">
+        <view class="avatar"></view>
+        <view class="name"></view>
+    </view>
+    <view class="image"></view>
+    <view class="text-line first-line"></view>
+    <view class="text-line"></view>
+    <view class="text-line third-line"></view>
+    <view class="text-line"></view>
+    <view class="text-line"></view>
+</view>

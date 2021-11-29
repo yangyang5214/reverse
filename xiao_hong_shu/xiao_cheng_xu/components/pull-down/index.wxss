@@ -1,0 +1,10 @@
+.scroll-view {
+    box-sizing: border-box;
+    padding-top: 164rpx;
+    text-align: center;
+}
+
+.page-scroll-end {
+    height: 10rpx;
+    width: 100%;
+}

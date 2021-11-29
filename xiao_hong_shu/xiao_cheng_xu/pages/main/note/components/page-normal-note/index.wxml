@@ -1,0 +1,18 @@
+<view>
+    <view class="page-container-inner {{isIphoneX?'x-container':''}}" style="margin-top: {{navigationBarTrueHeight}}px;">
+        <note-skeleton isShowSkeleton="{{isShowSkeleton}}"></note-skeleton>
+        <view class="illegal-box" wx:if="{{illegalInfo}}">
+            <image src="https://ci.xiaohongshu.com/5104af68-57ed-4aac-b5c5-0941693954c9"></image>
+            <view class="illegal-text">{{illegalInfo.desc}}</view>
+            <view class="illegal-text">看看“相关推荐”吧</view>
+        </view>
+        <share-info-bar navigationBarTrueHeight="{{navigationBarTrueHeight}}" shareUserId="{{shareUserId}}" wx:if="{{shareUserId&&!illegalInfo&&isShowShareInfoBar&&note.user}}"></share-info-bar>
+        <single-note-item commentList="{{note.commentList}}" imageTags="{{imageTags}}" note="{{note}}" noteItemHeight="{{note.noteItemHeight}}" noteTags="{{noteTags}}" poi="{{note.poi}}" supportComment="{{supportComment}}" swiperHeight="{{swiperHeight}}" user="{{note.user}}" wx:if="{{note.user&&!illegalInfo}}"></single-note-item>
+        <view>
+            <view class="related-notes-title" wx:if="{{!fetchedRelatedNotes||fetchedRelatedNotes&&noteList.length>0}}">相关推荐</view>
+            <note-list-skeleton wx:if="{{(!noteList||noteList.length===0)&&!fetchedRelatedNotes}}"></note-list-skeleton>
+            <note-list noteList="{{noteList}}" wx:if="{{noteList&&noteList.length>0}}"></note-list>
+            <view class="bottom-space"></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="share-info-container" style="top: {{navigationBarTrueHeight}}px;">
+    <view class="left-part">
+        <avatar catchtap="handleUserProfile" class="avatar" data-id="{{shareUserId}}" imageSrc="{{image}}" isOfficialVerified="{{redOfficialVerified}}" width="{{80}}"></avatar>
+        <view catchtap="handleUserProfile" class="user-txt">
+            <view class="nickname">{{nickname}}</view>
+            <view class="desc">{{desc}}</view>
+        </view>
+    </view>
+</view>

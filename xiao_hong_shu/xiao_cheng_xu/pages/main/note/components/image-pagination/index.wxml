@@ -1,0 +1,14 @@
+<view class="pagination-container">
+    <block wx:if="{{showSmallDot}}">
+        <view class="normal-dot {{current===1?'active-dot':''}}" wx:if="{{showLeftSmallDot}}"></view>
+        <view class="small-dot" wx:if="{{!showLeftSmallDot||showBothSideSmallDot}}"></view>
+        <view class="normal-dot {{item===current-2?'active-dot':''}}" wx:if="{{showLeftSmallDot}}" wx:for="{{maxShowNorDoTCount}}" wx:key="id"></view>
+        <view class="normal-dot {{item===current-1?'active-dot':''}}" wx:if="{{showBothSideSmallDot&&(item===current-2||item===current-1||item===current)}}" wx:for="{{totalImgCount}}" wx:key="id"></view>
+        <view class="normal-dot {{item===maxShowNorDoTCount-totalImgCount-current?'active-dot':''}}" wx:if="{{showRightSmallDot}}" wx:for="{{maxShowNorDoTCount}}" wx:key="id"></view>
+        <view class="normal-dot {{current===totalImgCount?'active-dot':''}}" wx:if="{{showRightSmallDot}}"></view>
+        <view class="small-dot" wx:if="{{!showRightSmallDot||showBothSideSmallDot}}"></view>
+    </block>
+    <block wx:if="{{!showSmallDot}}">
+        <view class="normal-dot {{item===current-1?'active-dot':''}}" wx:for="{{totalImgCount}}" wx:key="id"></view>
+    </block>
+</view>

@@ -1,0 +1,29 @@
+<view bindtap="handleTriggerExpand" class="note-tags">
+    <view class="note-tags-inner">
+        <view class="note-item-normal__desc-line" wx:for="{{isExpand?formatedDesc:unExpandFormatedDesc}}" wx:for-item="formatedItem" wx:key="index">
+            <block wx:for="{{formatedItem}}" wx:key="index">
+                <image class="note-item-normal__expression" src="{{item.url}}" wx:if="{{item.type==='image'}}"></image>
+                <view catchtap="handleUserTap" class="user-tag" data-item-id="{{item.id}}" wx:if="{{item.type==='userTag'}}">
+            {{item.text}}
+          </view>
+                <view catchtap="handlePageTap" class="page-tag" data-link="{{item.link}}" data-type="{{item.sourceType}}" wx:if="{{item.type==='pageTag'}}">
+                    <image class="page-tag-icon" mode="widthFix" src="{{item.iconUrl}}" wx:if="{{item.iconUrl}}"></image>
+            {{item.text}}
+          </view>
+                <block wx:if="{{item.type==='text'&&item.text}}">
+          {{item.text}}
+        </block>
+            </block>
+        </view>
+        <view class="note-tags-container" wx:if="{{(!canExpand||canExpand&&isExpand)&&noteTags&&noteTags.length>0}}">
+            <view catchtap="handleNoteTag" class="note-tags-item" data-link="{{noteTagItem.link}}" data-page-id="{{noteTagItem.pageId}}" wx:for="{{noteTags}}" wx:for-item="noteTagItem" wx:key="index">
+                <image src="https://ci.xiaohongshu.com/c05ea64b-91db-491e-b4e5-57dfdafdaa05"></image>
+                <text>{{noteTagItem.name}}</text>
+            </view>
+        </view>
+        <block wx:if="{{canExpand}}">
+            <view class="note-item-normal__desc-line expand" wx:if="{{!isExpand}}">展开</view>
+            <view class="note-item-normal__desc-line expand" wx:if="{{isExpand}}">收起</view>
+        </block>
+    </view>
+</view>

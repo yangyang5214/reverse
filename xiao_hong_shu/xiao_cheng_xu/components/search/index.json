@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "Quark-icon1": "../icon/index",
+        "Quark-icon2": "../icon/index",
+        "FixedContainer": "../fixed/index"
+    }
+}

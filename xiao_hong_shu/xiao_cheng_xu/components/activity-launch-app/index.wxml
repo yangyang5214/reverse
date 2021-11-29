@@ -1,0 +1,6 @@
+<view class="launch-app-container">
+    <MpModal background="rgba(0, 0, 0, 0.6)" bind:closeModal="handleCloseModal" modalWidth="530rpx" showModal="{{showModal}}"></MpModal>
+    <button appParameter="{{launchAppParameter}}" binderror="handleLaunchAppError" bindlaunchapp="handleLaunchAppSuccess" bindtap="handleTapLaunchApp" class="launch-app" openType="launchApp" wx:if="{{show}}">
+        <image class="logo" src="https://ci.xiaohongshu.com/b57a6dd5-f0fd-44df-9237-7b7157ade4f5"></image>
+    </button>
+</view>

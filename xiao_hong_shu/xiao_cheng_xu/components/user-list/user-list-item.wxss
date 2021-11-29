@@ -1,0 +1,76 @@
+.user-list-item {
+    background-color: #fff;
+    border-bottom: 1rpx solid #e6e6e6;
+    height: 152rpx;
+    padding: 20rpx;
+    position: relative;
+}
+
+.user-avatar {
+    float: left;
+    height: 112rpx;
+    margin-right: 20rpx;
+    min-width: 112rpx;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: calc(var(--ZINDEX-BASIC) * 1);
+}
+
+.user-avatar .user-avatar__image {
+    border-radius: 50%;
+    height: 112rpx;
+    width: 112rpx;
+}
+
+.user-avatar .verified {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.user-about {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-about .user-base {
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 30rpx;
+}
+
+.user-about .user-base .verify-icon {
+    height: 24rpx;
+    margin-left: 6rpx;
+    width: 24rpx;
+}
+
+.user-about .user-code {
+    color: #666;
+    font-size: 22rpx;
+}
+
+.user-about .user-desc {
+    color: #999;
+    font-size: 22rpx;
+}
+
+.focus {
+    border-radius: 86rpx;
+    font-size: 26rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: inherit;
+    position: absolute;
+    right: 30rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: calc(var(--ZINDEX-BASIC) * 1);
+}
+
+.focus.red {
+    color: #ff2741;
+}

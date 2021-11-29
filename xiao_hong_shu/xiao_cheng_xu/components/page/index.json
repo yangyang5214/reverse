@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "AddMpToast": "../toast/add-mp-toast"
+    }
+}

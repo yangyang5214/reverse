@@ -1,0 +1,31 @@
+<view class="image-swiper" style="z-index:{{zindex}}">
+    <swiper bindchange="handleNoteImageSwitched" circular="{{false}}" class="swiper-box" style="height: {{swiperHeight}}px">
+        <view>
+            <swiper-item bindtap="handleSwiperItemTap" data-index="{{index}}" wx:for="{{formatedImages}}" wx:key="$this">
+                <image bindload="handleImageLoad" class="image" data-index="{{index}}" mode="aspectFill" src="{{item.url}}" style="opacity: {{opacity}}"></image>
+                <view style="opacity: {{hideTag?'0':'1'}}" wx:if="{{imageTags[current-1]}}">
+                    <view class="sticker" style="top:{{item.unitCenter[1]*100}}%;left:{{item.unitCenter[0]*100}}%;" wx:for="{{imageTags[current-1]}}" wx:key="index">
+                        <view style="float: left; {{item.innerStyle}}">
+                            <view class="sticker-point" style="margin-top: 15rpx; float: {{item.style===1?'right':'left'}}">
+                                <view class="sticker-point-bg white"></view>
+                                <view animation="{{stickerPointData}}" class="sticker-point-bg black"></view>
+                            </view>
+                            <view class="sticker-line" style="margin-top: 20rpx; float: {{item.style===1?'right':'left'}}"></view>
+                            <view catchtap="handleAudioTagTap" class="sticker-info" wx:if="{{item.type==='audio'}}">
+                                <image class="audio-icon" src="../../../assets/play-default.svg" style="width: 14px; height: 14px;"></image>
+                                <text>{{item.duration}}"</text>
+                            </view>
+                            <view catchtap="handleSwiperTagTap" class="sticker-info" data-sticker="{{item}}" wx:else>
+                                <image class="sticker-icon-container" mode="widthFix" src="{{item.icon}}" wx:if="{{item.icon}}"></image>
+                                <text style="{{item.textStyle}}">{{item.event.value.name}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+        </view>
+    </swiper>
+    <view class="current-num" wx:if="{{images.length>1}}">
+    {{current}}/{{images.length}}
+  </view>
+</view>

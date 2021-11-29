@@ -1,0 +1,53 @@
+.page-container {
+    background: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Roboto,Segoe UI,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft Yahei,Microsoft JhengHei,sans-serif;
+}
+
+.illegal-box {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 490rpx;
+    justify-content: start;
+    width: 100%;
+}
+
+.illegal-box image {
+    height: 180rpx;
+    margin-bottom: 30rpx;
+    margin-top: 100rpx;
+    width: 180rpx;
+}
+
+.illegal-text {
+    color: #999;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.share-canvas {
+    height: 168px;
+    width: 210px;
+}
+
+.share-canvas,.share-moment-image-canvas {
+    left: -1000px;
+    position: fixed;
+    top: 200px;
+    z-index: 99999;
+}
+
+.share-moment-image-canvas {
+    height: 1334rpx;
+    width: 750rpx;
+}
+
+.share-moment-image-canvas.show {
+    left: 0;
+    top: 0;
+}

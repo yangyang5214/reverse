@@ -1,0 +1,11 @@
+{
+    "component": false,
+    "navigationBarTitleText": "打开小红书",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index",
+        "launchApp": "../../../components/launch-app/slot"
+    }
+}

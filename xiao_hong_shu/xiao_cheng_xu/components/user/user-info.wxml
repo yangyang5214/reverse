@@ -1,0 +1,123 @@
+<view class="container">
+    <view class="user-info-container">
+        <view class="banner-image-container" style="background-image: url({{userInfo.bannerImage}})"></view>
+        <view class="banner-image-bg-container"></view>
+        <view class="user-info-detail-container">
+            <view class="user-basic-info-container">
+                <view class="user-basic-info">
+                    <view class="user-avatar">
+                        <image bindtap="handleTapUserImage" class="avatar" src="{{userInfo.image||defaultImage}}"></image>
+                    </view>
+                    <view class="user-account-info">
+                        <view class="user-nickname">
+              {{userInfo.nickname}}
+            </view>
+                        <view class="user-red-id" wx:if="{{userInfo.redId}}">
+              小红书号：<text>{{userInfo.redId}}</text>
+                        </view>
+                        <view class="user-labels" wx:if="{{showLabels}}">
+                            <view class="label-item gender" wx:if="{{genderIcon}}">
+                                <image src="{{genderIcon}}"></image>
+                            </view>
+                            <view class="label-item" wx:if="{{userInfo.location}}">
+                {{userInfo.location}}
+              </view>
+                            <view class="label-item level" wx:if="{{userInfo.level&&userInfo.level.name}}">
+                                <image class="level-img" src="https://fe-img-qc.xhscdn.com/16213efba624f91ad1834c91e7bbf0e9fb747185"></image>
+                                <view class="level-text">{{userInfo.level.name}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="user-more-info">
+                    <view class="user-verify-info-inner" wx:if="{{userInfo.officialVerifyName}}">
+                        <image class="icon" src="{{userInfo.officialVerifyIcon}}" wx:if="{{userInfo.officialVerifyIcon}}"></image>
+                        <view class="text">
+                {{userInfo.officialVerifyName}}
+              </view>
+                        <view class="text" wx:if="{{!isBrand&&userInfo.verifyContent}}">
+                {{userInfo.verifyContent}}
+              </view>
+                    </view>
+                    <block wx:else>
+                        <view class="user-verify-info" wx:if="{{userInfo.verifyContent||isBrand}}">
+                            <view class="user-verify-info-inner">
+                                <image class="icon" src="https://ci.xiaohongshu.com/fff0a44d-b9ad-4732-b0d9-7b999b270ed9" wx:if="{{userInfo.redOfficialVerifyIconType===1}}"></image>
+                                <image class="icon" src="https://ci.xiaohongshu.com/a0c1fc50-73d8-4ac0-9422-7eaf58217455" wx:if="{{userInfo.redOfficialVerifyIconType===2}}"></image>
+                                <view class="text" wx:if="{{isBrand}}">
+                企业账号
+              </view>
+                                <view class="text" wx:if="{{!isBrand&&userInfo.verifyContent}}">
+                {{userInfo.verifyContent}}
+              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class="user-desc">
+                        <text>{{userInfo.desc}}</text>
+                    </view>
+                    <view class="user-data">
+                        <view class="user-data-total">
+                            <view class="user-data-total-item">
+                                <view class="detail-top-number">{{userInfo.follows||0}}</view>
+                                <view class="detail-top-text">关注</view>
+                            </view>
+                            <view class="user-data-total-item">
+                                <view class="detail-top-number">{{fansNum||0}}</view>
+                                <view class="detail-top-text">粉丝</view>
+                            </view>
+                            <view class="user-data-total-item">
+                                <view class="detail-top-number">{{likedAndCollected||0}}</view>
+                                <view class="detail-top-text">获赞与收藏</view>
+                            </view>
+                        </view>
+                        <view class="user-action">
+                            <slot name="detail-bottom"></slot>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tab-bar-bg"></view>
+    <view class="tab-bar">
+        <view bindtap="handleTapSwitchTab" class="mine-user-notes" data-type="notes">
+            <view class="tab-bar-text {{switchTab=='notes'&&isLogin?'isTaped':''}}">
+        笔记
+      </view>
+            <view class="tab-bar-choose-bottom {{switchTab=='notes'&&isLogin?'isTaped':''}}"></view>
+        </view>
+        <view bindtap="handleTapSwitchTab" class="mine-user-collect" data-type="collect" wx:if="{{!isBrand}}">
+            <view class="tab-bar-text {{switchTab=='collect'&&isLogin?'isTaped':''}}">
+                <image class="icon-lock" src="https://picasso-static.xiaohongshu.com/fe-platform/f99dd41b5edecf844bbc1d9edad672624feaf5e7.png" wx:if="{{!userInfo.noteCollectionIsPublic}}"></image>
+        收藏
+      </view>
+            <view class="tab-bar-choose-bottom {{switchTab=='collect'&&isLogin?'isTaped':''}}"></view>
+        </view>
+        <view bindtap="handleTapSwitchTab" class="mine-user-at-ta" data-type="atTa" wx:if="{{isBrand}}">
+            <view class="tab-bar-text {{switchTab=='atTa'&&isLogin?'isTaped':''}}">
+        @ TA
+      </view>
+            <view class="tab-bar-choose-bottom {{switchTab=='atTa'&&isLogin?'isTaped':''}}"></view>
+        </view>
+    </view>
+    <view class="notes" wx:if="{{isLogin}}">
+        <Quark-x-not-found type="{{listType}}" wx:if="{{(!noteList.length||switchTab==='collect'&&!isMinePage&&noteList.length&&!userInfo.noteCollectionIsPublic)&&isFetchEnd}}"></Quark-x-not-found>
+        <NoteList canLike="{{canLike}}" notes="{{noteList}}"></NoteList>
+        <view class="bottom-end {{isIPhoneX?'iphoneX':''}}" wx:if="{{noteList.length&&!isFetching&&isFetchEnd}}">
+      - The End -
+    </view>
+        <Loading class="loading" text="{{text}}" type="{{type}}" wx:if="{{isFetching}}"></Loading>
+    </view>
+    <view class="no-login" wx:if="{{!isLogin}}">
+        <image class="no-login-img" src="{{noFoundImg}}"></image>
+        <view class="no-login__title">
+            <view bindtap="handleToLogin" class="tap-login">
+        点击登录
+      </view>
+            <view>
+        可以查看发布、点赞、收藏的笔记
+      </view>
+        </view>
+    </view>
+</view>

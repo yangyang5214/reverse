@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "navigationBarTitleText": "视频详情",
+    "backgroundColor": "#000000",
+    "usingComponents": {
+        "note-skeleton": "../note-skeleton/index",
+        "note-list-skeleton": "../note-list-skeleton/index",
+        "note-list": "../note-list/index",
+        "single-note-item": "../single-note-item/index",
+        "share-info-bar": "../share-info-bar/index"
+    }
+}

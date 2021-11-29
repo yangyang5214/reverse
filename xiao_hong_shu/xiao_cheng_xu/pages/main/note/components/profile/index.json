@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "collect-form": "../collect-form/index",
+        "follow-modal": "../follow-modal/index",
+        "avatar": "../avatar/index"
+    }
+}

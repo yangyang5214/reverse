@@ -1,0 +1,27 @@
+<view catchtap="closeComments" catchtouchmove="false" class="video-comment">
+    <view catchtap animation="{{commentAnimationData}}" class="comments-container">
+        <view class="functional-zone">
+            <text>共 {{commentsData.commentsTotal||0}} 条评论</text>
+            <image catchtap="closeComments" class="cancel" src="https://fe-video-qc.xhscdn.com/picasso-editor/f6ab6e20c6c53bf461345bf74b0f2376677e8848.png"></image>
+        </view>
+        <scroll-view bindscrolltolower="handleFetchMore" class="comments-section" scrollY="true" wx:if="{{commentsData.comments}}">
+            <view catchtouchmove="" class="commentsList" wx:for="{{commentsData.comments}}" wx:key="index">
+                <image class="portrait" src="{{item.user.image}}"></image>
+                <view class="comment-details">
+                    <view class="comment-details-text">
+                        <view class="user-name">{{item.user.nickname}}</view>
+                        <view class="comment-time">{{item.time}}</view>
+                        <view class="comment">{{item.content}}</view>
+                    </view>
+                    <view class="like">
+                        <image src="https://fe-video-qc.xhscdn.com/picasso-editor/115770cb83b06d19e7c50d5161f1d163bacdc9d2.png"></image>
+                        <text>{{item.likes}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="comment-end" wx:if="{{isNoMoreComments}}">
+        - THE END -
+      </view>
+        </scroll-view>
+    </view>
+</view>

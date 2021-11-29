@@ -1,0 +1,30 @@
+.launch-app-container {
+    right: 0;
+}
+
+.launch-app,.launch-app-container {
+    bottom: 60rpx;
+    position: fixed;
+    z-index: 9999;
+}
+
+.launch-app {
+    background: none;
+    border-radius: 74rpx;
+    box-shadow: 0 4rpx 16rpx rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 13px;
+    left: 50%;
+    line-height: 28px;
+    margin-left: -124rpx;
+    padding: 0;
+}
+
+.launch-app,.launch-app .logo {
+    height: 74rpx;
+    width: 248rpx;
+}
+
+.launch-app-container .launch-app:after {
+    border: none;
+}

@@ -1,0 +1,3 @@
+<view class="cooperate-binds">
+  · 与 <text bindtap="handleTapedCooperate" class="cooperate-name" data-cooperateid="{{item.id}}" data-link="{{item.link}}" wx:for="{{formatedBrands}}" wx:key="id">@{{item.name}}</text> 品牌合作
+</view>

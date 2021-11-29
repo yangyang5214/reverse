@@ -1,0 +1,12 @@
+<view class="feeds">
+    <view class="note-list">
+        <view class="note-list-show">
+            <view class="note-list__column note-list__column_left">
+                <note-list-item note="{{item}}" wx:for="{{doubleColumnNotes.leftNotes}}" wx:key="id"></note-list-item>
+            </view>
+            <view class="note-list__column note-list__column_right">
+                <note-list-item note="{{item}}" wx:for="{{doubleColumnNotes.rightNotes}}" wx:key="id"></note-list-item>
+            </view>
+        </view>
+    </view>
+</view>

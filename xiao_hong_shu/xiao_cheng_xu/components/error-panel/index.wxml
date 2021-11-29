@@ -1,0 +1,6 @@
+<view class="error-panel">
+    <image class="not-found-img" src="{{info.icon||'https://ci.xiaohongshu.com/61026919-f0b4-429b-8efd-6593a1372c10'}}"></image>
+    <view class="error-panel__title" wx:if="title">
+    {{info.title||'努力加载中，请稍后再试'}}
+  </view>
+</view>

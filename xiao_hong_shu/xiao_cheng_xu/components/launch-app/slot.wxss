@@ -1,0 +1,23 @@
+.launch-app-container,.launch-app-container .slot {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: inherit;
+}
+
+.launch-app-container .slot {
+    -webkit-tap-highlight-color: none;
+    background-color: none;
+    background: none;
+    border-radius: 0;
+    display: flex;
+    padding: 0;
+}
+
+.launch-app-container button {
+    background: none;
+}
+
+.launch-app-container button::after {
+    border: none;
+}

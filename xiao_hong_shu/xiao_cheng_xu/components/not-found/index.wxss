@@ -1,0 +1,33 @@
+.not-found {
+    height: 1000rpx;
+    margin: 252rpx auto 0rpx;
+    text-align: center;
+}
+
+.not-found-img {
+    height: 104rpx;
+    margin-bottom: 30rpx;
+    width: 170rpx;
+}
+
+.not-found-img.collect {
+    height: 132rpx;
+}
+
+.not-found-img.user {
+    height: 102rpx;
+    margin-bottom: 30rpx;
+    width: 166rpx;
+}
+
+.not-found-img.collectPrivate {
+    height: 120rpx;
+    margin-bottom: 30rpx;
+    width: 168rpx;
+}
+
+.not-found__title {
+    color: var(--GREY3);
+    font-size: var(--FONT-SIZE-S);
+    line-height: var(--LINE-HEIGHT-SINGLE-LINE-S);
+}

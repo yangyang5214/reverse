@@ -1,0 +1,11 @@
+<QuarkFixed>
+    <view class="add-mp-container">
+        <image class="icon-top" src="https://ci.xiaohongshu.com/e2bbad83-803a-4c6f-a3fe-b585d8692f3f"></image>
+        <view class="add-mp-content {{addMyMp.hasClose?' hasClose':''}}">
+            <view class="content-text">添加小程序，发现美好生活</view>
+            <QuarkForm bind:submit="handleCloseAddMyMp" fromSource="pin_mini_program" wx:if="{{addMyMp.hasClose}}">
+                <image class="close-icon" src="{{closeIcon}}"></image>
+            </QuarkForm>
+        </view>
+    </view>
+</QuarkFixed>

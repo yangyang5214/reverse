@@ -1,0 +1,51 @@
+<view class="page-container {{pageContainerClass}} {{pageConfig.pageClass}}">
+    <view class="navigation-bar {{isIphoneX?'iphoneX':''}} {{navigationBarConfig.noBackgroundColor?'no-bg':''}}" style="{{navigationBarStyles}}" wx:if="{{!navigationBarConfig.isCover&&canUseCustomNavigationBar&&!noShowNavigationBar}}">
+        <view class="navigation-bar-inner">
+            <view class="navigation-bar-side left-side">
+                <view class="left-side-inner {{leftSideInnerClass}} {{navigationBarConfig.noBackgroundColor?'no-border':''}}" style="{{leftSideInnerStyle}}" wx:if="{{navigationBarIconsNum>0&&(showBackIcon||showHomePageIcon)}}">
+                    <view catchtap="handleGoLastPage" class="navigation-icon-container  {{navIconContainerClass}}" wx:if="{{showBackIcon}}">
+                        <image class="navigation-back-icon" src="../../assets/images/4x_navigation_black_back.png" wx:if="{{type==='black'}}"></image>
+                        <image class="navigation-back-icon" src="../../assets/images/4x_navigation_white_back.png" wx:elif="{{type==='white'}}"></image>
+                        <image class="navigation-back-icon" src="../../assets/images/4x_navigation_black_back.png" wx:else></image>
+                    </view>
+                    <view class="navigation-gap" wx:if="{{navigationBarIconsNum>1&&type!=='white'}}"></view>
+                    <view catchtap="handleHomePage" class="navigation-icon-container back-icon-container-defeat" wx:if="{{showHomePageIcon}}">
+                        <image class="navigation-home-icon" src="../../assets/images/4x_navigation_white_home.png" wx:if="{{type==='white'}}"></image>
+                        <image class="navigation-home-icon" src="../../assets/images/4x_navigation_black_home.png" wx:else></image>
+                    </view>
+                </view>
+            </view>
+            <view class="navigation-bar-center">
+        {{title}}
+      </view>
+            <view class="navigation-bar-side right-side"></view>
+        </view>
+    </view>
+    <cover-view class="navigation-bar {{isIphoneX?'iphoneX':''}}" style="{{navigationBarStyles}}" wx:if="{{navigationBarConfig.isCover&&canUseCustomNavigationBar&&!noShowNavigationBar}}">
+        <cover-view class="navigation-bar-inner">
+            <cover-view class="navigation-bar-side left-side">
+                <cover-view class="left-side-inner {{leftSideInnerClass}} {{navigationBarConfig.noBackgroundColor?'no-border':''}}" style="{{leftSideInnerStyle}}" wx:if="{{navigationBarIconsNum>0&&(showBackIcon||showHomePageIcon)}}">
+                    <cover-view catchtap="handleGoLastPage" class="navigation-icon-container {{navIconContainerClass}}" wx:if="{{showBackIcon}}">
+                        <cover-image class="navigation-back-icon" src="../../../assets/images/4x_navigation_black_back.png" wx:if="{{type==='black'}}"></cover-image>
+                        <cover-image class="navigation-back-icon" src="../../../assets/images/4x_navigation_white_back.png" wx:elif="{{type==='white'}}"></cover-image>
+                        <cover-image class="navigation-back-icon" src="../../../assets/images/4x_navigation_black_back.png" wx:else></cover-image>
+                    </cover-view>
+                    <cover-view class="navigation-gap" wx:if="{{navigationBarIconsNum>1}}"></cover-view>
+                    <cover-view catchtap="handleHomePage" class="navigation-icon-container back-icon-container-defeat" wx:if="{{showHomePageIcon}}">
+                        <cover-image class="navigation-home-icon" src="../../../assets/images/4x_navigation_black_home.png"></cover-image>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class="navigation-bar-center">
+        {{title}}
+      </cover-view>
+            <cover-view class="navigation-bar-side right-side"></cover-view>
+        </cover-view>
+    </cover-view>
+    <view class="page-content" style="{{pageContentStyle}}">
+        <view class="plugins-container">
+            <AddMpToast addMyMp="{{addMyMp}}" bind:closeAddMyMp="handleCloseAddMyMp" wx:if="{{addMyMp.isShowAddMp}}"></AddMpToast>
+        </view>
+        <slot></slot>
+    </view>
+</view>

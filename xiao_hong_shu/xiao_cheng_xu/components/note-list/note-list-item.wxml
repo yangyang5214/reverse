@@ -1,0 +1,61 @@
+<view class="item {{trackClassName}}" id="{{item.trackData}}" wx:if="{{item.type!=='interest'}}">
+    <form bindsubmit="handleNoteItemTap" reportSubmit="true">
+        <button class="submit-container" formType="submit">
+            <view class="image-container" style="height:{{item.cover.height/item.cover.width*360}}rpx">
+                <image class="item-image {{loadedGifMap[item.id]&&item.cover.gifUrl?'hide':''}}" src="{{item.cover.url}}" style="height:{{item.cover.height/item.cover.width*360}}rpx"></image>
+                <image bindload="handlGifLoaded" class="item-image {{loadedGifMap[item.id]?'':'hide'}}" data-id="{{item.id}}" lazyLoad="{{isLazyLoad}}" src="{{item.cover.gifUrl||item.cover.url}}" style="height:{{item.cover.height/item.cover.width*344}}rpx" wx:if="{{item.cover.gifUrl}}"></image>
+                <image class="video-sign" src="https://ci.xiaohongshu.com/c38c3f63-c37b-49eb-bd6d-91226bc9cd98" wx:if="{{item.type==='video'}}"></image>
+            </view>
+            <view class="item-content">
+                <view class="item-recommend" wx:if="{{item.recommend.desc&&item.recommend.icon}}">
+                    <image class="recommend-icon" src="{{item.recommend.icon}}"></image>
+                    <view class="recommend-desc">
+            {{item.recommend.desc}}
+          </view>
+                </view>
+                <view class="item-title" wx:if="{{item.title}}">
+          {{item.title}}
+        </view>
+            </view>
+        </button>
+    </form>
+    <view class="detail-info-container">
+        <view class="item-author">
+            <form bindsubmit="handleUserTap" reportSubmit="true">
+                <button class="submit-container inline item-author-inner" formType="submit">
+                    <view class="item-author-box" wx:if="{{item.user.image||item.user.images}}">
+                        <image class="item-author-img" src="{{item.user.image||item.user.images}}"></image>
+                    </view>
+                    <view class="item-author-name">
+            {{item.user.nickname}}
+          </view>
+                </button>
+            </form>
+            <form bindsubmit="handleLikeTap" class="item-like" reportSubmit="true">
+                <button class="submit-container inline" formType="submit">
+                    <image src="../../assets/images/4x_icon_like_red_20.png" wx:if="{{item.isLiked}}"></image>
+                    <image src="../../assets/images/4x_icon_like_grey_20.png" wx:if="{{!item.isLiked}}"></image>
+                    <view>{{item.likes}}</view>
+                </button>
+            </form>
+        </view>
+    </view>
+</view>
+<view class="item {{trackClassName}}" id="{{item.trackData}}" wx:if="{{item.type==='interest'}}">
+    <form bindsubmit="handleGoInterestTap" reportSubmit="true">
+        <button class="submit-container" formType="submit">
+            <image class="item-image interest-cover" src="{{item.cover.url}}" style="height:{{item.cover.height/item.cover.width*344}}rpx"></image>
+            <view class="item-interest-content">
+                <view class="item-title interest-title" wx:if="{{item.firTitle}}">
+          {{item.firTitle}}
+        </view>
+                <view class="item-title interest-title" wx:if="{{item.secTitle}}">
+          {{item.secTitle}}
+        </view>
+                <button class="interest-button">
+          选择兴趣
+        </button>
+            </view>
+        </button>
+    </form>
+</view>

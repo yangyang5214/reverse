@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "navigationBarTitleText": "视频详情",
+    "backgroundColor": "#000000",
+    "usingComponents": {
+        "note-action-bar": "../video-note-action-bar/index",
+        "video-slide-guide": "../video-slide-guide/index",
+        "video-comment": "../video-comment/index",
+        "video-content": "../video-content/index"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "note-tags": "../note-tags/index"
+    }
+}

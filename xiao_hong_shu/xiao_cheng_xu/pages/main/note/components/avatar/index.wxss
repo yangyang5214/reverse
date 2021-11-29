@@ -1,0 +1,14 @@
+.avatar-container {
+    display: inline-block;
+    position: relative;
+}
+
+.avatar-container .avatar {
+    border-radius: 50%;
+}
+
+.avatar-container .verified {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}

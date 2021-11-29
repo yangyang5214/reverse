@@ -1,0 +1,57 @@
+<view class="onebox-content">
+    <view bindtap="handleTapTopic" class="one-box" data-topic="{{noteOnebox.box}}" wx:if="{{noteOnebox.type!=='user'&&noteOnebox.type!=='goods'&&noteOnebox.box.id}}">
+        <image class="onebox-cover" src="{{noteOnebox.box.image}}"></image>
+        <view class="onebox-text">
+            <view class="onebox-title">
+        {{noteOnebox.box.title}}
+      </view>
+            <view class="onebox-desc">
+        {{noteOnebox.box.desc}}
+      </view>
+            <view class="onebox-address" wx:if="{{noteOnebox.box.subDesc}}">
+        {{noteOnebox.box.subDesc}}
+      </view>
+        </view>
+        <image class="right-icon" src="../../assets/svgs/arrow-right.svg"></image>
+    </view>
+    <view bindtap="handleTapItem" class="one-box" wx:if="{{noteOnebox.type==='user'}}">
+        <view class="onebox-avatar">
+            <image class="onebox-avatar-image" src="{{noteOnebox.box.image}}"></image>
+            <image class="verified" src="{{officalVerified}}" wx:if="{{noteOnebox.box.redOfficialVerified}}"></image>
+        </view>
+        <view class="onebox-text">
+            <view class="onebox-title">
+        {{noteOnebox.box.name}}
+      </view>
+            <view class="onebox-desc">
+        {{noteOnebox.box.info}}
+      </view>
+            <view class="onebox-address">
+        {{noteOnebox.box.desc}}
+      </view>
+        </view>
+        <button catchtap="handleTriggleFollow" class="quark-button-outline {{noteOnebox.box.followed?'disable':'red'}} focus">
+      {{noteOnebox.box.followed?'已关注':'关注'}}
+    </button>
+    </view>
+    <view bindtap="handleGoodsItemTap({{noteOnebox.box.id}})" class="one-box" id="{{noteOnebox.box.id}}" wx:if="{{noteOnebox.type==='goods'}}">
+        <image class="onebox-cover" src="{{noteOnebox.box.image}}"></image>
+        <view class="onebox-text">
+            <view class="onebox-desc">
+        {{noteOnebox.box.desc}}
+      </view>
+            <view class="onebox-title">
+        {{noteOnebox.box.title}}
+      </view>
+            <view class="onebox-title">
+                <view class="onebox-price">
+          {{noteOnebox.box.price}}
+        </view>
+                <view class="onebox-discount-price">
+          {{noteOnebox.box.discountPrice}}
+        </view>
+            </view>
+        </view>
+        <image class="right-icon" src="../../assets/svgs/arrow-right.svg"></image>
+    </view>
+</view>

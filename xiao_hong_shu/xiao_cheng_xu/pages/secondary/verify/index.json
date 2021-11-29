@@ -1,0 +1,7 @@
+{
+    "component": false,
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index",
+        "sm-captcha": "plugin://wxfb52904a0e24dc20/captcha"
+    }
+}

@@ -1,0 +1,23 @@
+<view class="comment-container" wx:if="{{commentsCount>0}}">
+    <view class="comment-inner new-style">
+        <view bindtap="handleGoCommentPage">
+            <view class="comment-box" wx:if="{{index<3}}" wx:for="{{commentListData}}" wx:key="index">
+                <text class="commenter">{{item.user.nickname}}：</text>
+                <view class="comment">
+                    <view class="note-item-normal__desc-line" wx:for="{{item.formatedDesc}}" wx:for-item="formatedItem" wx:key="index">
+                        <block wx:for="{{formatedItem}}" wx:key="index">
+                            <image class="note-item-normal__expression" src="{{item.url}}" wx:if="{{item.type==='image'}}"></image>
+                            <block wx:if="{{item.type==='text'&&item.text}}">
+                {{item.text}}
+              </block>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="total">
+                <font class="blue-font">{{commentListData.length>3?'查看全部 '+commentsCount+' 条评论':'看看大家都在讨论什么'}}</font>
+                <image src="https://ci.xiaohongshu.com/b1992100-d353-4e4e-ba6a-46beb326476a"></image>
+            </view>
+        </view>
+    </view>
+</view>

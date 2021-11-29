@@ -1,0 +1,8 @@
+{
+    "component": false,
+    "usingComponents": {
+        "QuarkPage": "../../../components/page/index",
+        "Count-down": "../../../components/count-down/index",
+        "Quark-toast": "../../../components/toast/index"
+    }
+}

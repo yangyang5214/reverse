@@ -1,0 +1,151 @@
+.container,page {
+    background-color: #f5f8fa;
+}
+
+.container {
+    min-height: 100%;
+}
+
+.skeleton-bg {
+    background-color: #e6e6e6;
+}
+
+.top-skeleton-container {
+    position: absolute;
+    top: 0;
+}
+
+.top-skeleton-container .top-skeleton-searchbar {
+    height: 82rpx;
+    width: 100%;
+}
+
+.top-skeleton-container .top-skeleton-searchbar .top-skeleton-searchbar-inner {
+    border-radius: 50px;
+    height: 66rpx;
+    margin: 8rpx 30rpx;
+}
+
+.top-skeleton-container .top-skeleton-category {
+    height: 82rpx;
+    width: 100%;
+}
+
+.top-skeleton-container .top-skeleton-category .top-skeleton-category-item {
+    display: inline-block;
+    height: 42rpx;
+    margin: 20rpx 40rpx 0;
+    width: 60rpx;
+}
+
+.feeds-skeleton-container {
+    width: 100%;
+}
+
+.feeds-skeleton-container .top-skeleton-activity {
+    height: 360rpx;
+    margin-bottom: 20rpx;
+    width: 100vw;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 20rpx;
+    width: 50%;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .feeds-skeleton-image {
+    height: 180rpx;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .skeleton-desc {
+    height: 30rpx;
+    margin-top: 20rpx;
+    width: 100%;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .feeds-skeleton-info {
+    height: 70rpx;
+    margin-top: 20rpx;
+    width: 100%;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .feeds-skeleton-info .skeleton-avatar {
+    border-radius: 50%;
+    float: left;
+    height: 50rpx;
+    margin-left: 10rpx;
+    width: 50rpx;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .feeds-skeleton-info .skeleton-name {
+    float: left;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    width: 50rpx;
+}
+
+.feeds-skeleton-container .feeds-skeleton-item .feeds-skeleton-info .skeleton-like {
+    float: right;
+    height: 30rpx;
+    margin-right: 10rpx;
+    margin-top: 10rpx;
+    width: 50rpx;
+}
+
+.searchbar {
+    left: 0;
+    top: -1px;
+    z-index: 20;
+}
+
+.category-list,.searchbar {
+    background-color: #fff;
+    position: fixed;
+    white-space: nowrap;
+}
+
+.category-list {
+    box-shadow: 0 4rpx 12rpx 0 rgba(0,0,0,.04);
+    top: 81rpx;
+    width: 100%;
+    z-index: 10;
+}
+
+.category-list .category {
+    color: #999;
+    display: inline-block;
+    font-size: 26rpx;
+    height: 82rpx;
+    line-height: 82rpx;
+}
+
+.category-list .category view {
+    display: inline;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.category-list .category.active {
+    color: #333;
+    font-weight: 700;
+}
+
+.home-page-main-container {
+    width: 100%;
+}
+
+.home-page-main-container .feeds {
+    margin-top: 10rpx;
+}
+
+.home-page-main-container.extend {
+    margin-top: 86rpx;
+}
+
+.activity-entry {
+    height: 360rpx;
+    width: 100vw;
+}

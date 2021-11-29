@@ -1,0 +1,14 @@
+{
+    "component": true,
+    "usingComponents": {
+        "profile": "../profile/index",
+        "note-image-swiper": "../note-image-swiper/index",
+        "note-text": "../note-text/index",
+        "note-action-bar": "../note-action-bar/index",
+        "note-comment": "../note-comment/index",
+        "image-pagination": "../image-pagination/index",
+        "note-date": "../note-date/index",
+        "cooperate-binds": "../cooperate-binds/index",
+        "comment-input": "../comment-input/index"
+    }
+}

@@ -1,0 +1,3 @@
+<view class="feeds">
+    <NoteList bind:noteItemTap="handleNoteItemTap" canLike="{{canLike}}" isFirstLogin="{{isFirstLogin}}" isNeverFillInRecommendTagForm="{{isNeverFillInRecommendTagForm}}" notes="{{notes}}"></NoteList>
+</view>
